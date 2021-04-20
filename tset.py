@@ -11,4 +11,7 @@ class HelloWorld(Resource):
 api.add_resource(HelloWorld, '/')
 
 if __name__ == '__main__':
+    import sys
+    print (sys.version)
+
     app.run(debug=True)
