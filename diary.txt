@@ -1,0 +1,9 @@
+
+
+21.04.2021
+
+sqlalchemy and flask_sqlalchemy are different modules!
+Molchanow used flask_sqlalchemy.
+
+mysql-connector-python==8.0.24 - installed.
+empty database created;
