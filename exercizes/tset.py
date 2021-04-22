@@ -9,15 +9,18 @@ import sqlalchemy
 app = Flask(__name__)
 api = Api(app)
 
+
 class HelloWorld(Resource):
     def get(self):
         return {'hello': 'world'}
+
 
 api.add_resource(HelloWorld, '/')
 
 if __name__ == '__main__':
     import sys
-    print (sys.version)
+
+    print(sys.version)
     print(help(sqlalchemy))
 
     # sqlalchemy.
@@ -28,6 +31,5 @@ if __name__ == '__main__':
     # txt = res.text
     # with open('iert.txt', 'w', encoding='utf-8') as file:
     #     file.write(txt)
-
 
     # app.run(debug=True)
