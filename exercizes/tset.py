@@ -12,6 +12,7 @@ api = Api(app)
 
 class HelloWorld(Resource):
     def get(self):
+        print('HOP')
         return {'hello': 'world'}
 
 
@@ -21,7 +22,7 @@ if __name__ == '__main__':
     import sys
 
     print(sys.version)
-    print(help(sqlalchemy))
+    # print(help(sqlalchemy))
 
     # sqlalchemy.
     # pytest.
@@ -32,4 +33,4 @@ if __name__ == '__main__':
     # with open('iert.txt', 'w', encoding='utf-8') as file:
     #     file.write(txt)
 
-    # app.run(debug=True)
+    app.run(debug=True)
