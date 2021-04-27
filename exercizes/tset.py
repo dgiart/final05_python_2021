@@ -21,7 +21,9 @@ api.add_resource(HelloWorld, '/')
 if __name__ == '__main__':
     import sys
 
-    print(sys.version)
+    # sqlalchemy.create_engine()
+
+    print(sqlalchemy.__version__)
     # print(help(sqlalchemy))
 
     # sqlalchemy.
@@ -33,4 +35,4 @@ if __name__ == '__main__':
     # with open('iert.txt', 'w', encoding='utf-8') as file:
     #     file.write(txt)
 
-    app.run(debug=True)
+    # app.run(debug=True)

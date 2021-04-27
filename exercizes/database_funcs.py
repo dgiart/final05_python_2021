@@ -13,6 +13,7 @@ class Database:
                                          host=host)
             cursor = db.cursor()
             cursor.execute(f"CREATE DATABASE {name}")  # .format(name))
+
             self.bases[name] = db
         except mysql.connector.Error as err:
             print("Failed creating database: {}".format(err))
@@ -36,7 +37,7 @@ class Database:
 
 if __name__ == '__main__':
     b = Database()
-    # base7 = b.create_base('basefromfunc7', 'art', 'artem', 'localhost')
+    base7 = b.create_base('books', 'art', 'artem', 'localhost')
     # for i in range(2, 8):
-    b.drop_base(f'basefromfunc', 'art', 'artem', 'localhost')
+    # b.drop_base(f'basefromfunc', 'art', 'artem', 'localhost')
     print(b.bases)
