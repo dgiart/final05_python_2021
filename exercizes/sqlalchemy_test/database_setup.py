@@ -1,23 +1,14 @@
-import sys
-import mysql.connector
-# для настройки баз данных
 from sqlalchemy import Column, ForeignKey, Integer, String
-
-# для определения таблицы и модели
 from sqlalchemy.ext.declarative import declarative_base
-
-# для создания отношений между таблицами
-from sqlalchemy.orm import relationship
-
-# для настроек
 from sqlalchemy import create_engine
 
-# создание экземпляра declarative_base
+# from models import Book
+
+
 Base = declarative_base()
 
 
-# здесь добавим классы
-# мы создаем класс Book наследуя его из класса Base.
+
 class Book(Base):
     __tablename__ = 'book'
 
@@ -25,11 +16,23 @@ class Book(Base):
     title = Column(String(250), nullable=False)
     author = Column(String(250), nullable=False)
     genre = Column(String(250))
-    # cost = Column(Integer)
+
+
+engine = create_engine('mysql+mysqlconnector://art:artem@localhost/utf_books')
+Base.metadata.bind = engine
+Base.metadata.create_all(engine)
+
+# мы создаем класс Book наследуя его из класса Base.
+
+
+# class Book(Base):
+#     __tablename__ = 'book'
+#
+#     id = Column(Integer, primary_key=True)
+#     title = Column(String(250), nullable=False)
+#     author = Column(String(250), nullable=False)
+#     genre = Column(String(250))
+#     # cost = Column(Integer)
 
 
 # создает экземпляр create_engine в конце файла
-engine = create_engine('mysql+mysqlconnector://art:artem@localhost/books')
-Base.metadata.bind = engine
-
-Base.metadata.create_all(engine)

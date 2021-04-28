@@ -1,20 +1,11 @@
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-# импортируем классы Book и Base из файла database_setup.py
-from database_setup import Book, Base, engine
-import mysql.connector
+from database_setup import engine, Book
+# from models import Book
 
-import alembic
-# engine = create_engine('mysql+mysqlconnector://art:artem@localhost/books')
-# Свяжим engine с метаданными класса Base,
-# чтобы декларативы могли получить доступ через экземпляр DBSession
-# Base.metadata.bind = engine
+DBSession = sessionmaker(bind=engine)
+session = DBSession()
 
-# DBSession = sessionmaker(bind=engine)
-# Экземпляр DBSession() отвечает за все обращения к базе данных
-# и представляет «промежуточную зону» для всех объектов,
-# загруженных в объект сессии базы данных.
-# session = DBSession()
+
 def del_book(title):
     bookToDelete = session.query(Book).filter_by(title=title).one()
     session.delete(bookToDelete)
@@ -28,18 +19,9 @@ def add_book(title='title', author='author', genre='genre'): #, cost = 10):
 
 
 if __name__ == '__main__':
-    # engine = create_engine('mysql+mysqlconnector://art:artem@localhost/books')
-    # Свяжим engine с метаданными класса Base,
-    # чтобы декларативы могли получить доступ через экземпляр DBSession
-    # Base.metadata.bind = engine
 
-    DBSession = sessionmaker(bind=engine)
-    # Экземпляр DBSession() отвечает за все обращения к базе данных
-    # и представляет «промежуточную зону» для всех объектов,
-    # загруженных в объект сессии базы данных.
-    session = DBSession()
-    # bookOne = Book(title="Pure c222", author="Art Baiden", genre="computer leterature")
+    # bookOne = Book(title="Math", author="Eiler", genre="scientific leterature")
     # session.add(bookOne)
     # session.commit()
-    add_book()
+    add_book(title="Привет, Мир!", author="Van", genre="Python")
     # del_book("Pure c222")

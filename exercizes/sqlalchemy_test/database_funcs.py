@@ -37,7 +37,7 @@ class Database:
 
 if __name__ == '__main__':
     b = Database()
-    base7 = b.create_base('books', 'art', 'artem', 'localhost')
+    base7 = b.create_base('testbooks', 'art', 'artem', 'localhost')
     # for i in range(2, 8):
     # b.drop_base(f'basefromfunc', 'art', 'artem', 'localhost')
     print(b.bases)
