@@ -7,3 +7,12 @@ Molchanow used flask_sqlalchemy.
 
 mysql-connector-python==8.0.24 - installed.
 empty database created;
+
+create database udemy_test CHARACTER SET UTF8 COLLATE UTF8_UNICODE_CI
+
+29.04.21
+
+'create_all' was moved from 'app' to 'crud', models in separate file
+_TODO:
+split processes: 1) create database, 2) create tables from models, 3) crud.
+

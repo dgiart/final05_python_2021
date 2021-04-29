@@ -1,6 +1,10 @@
 from sqlalchemy.orm import sessionmaker
-from database_setup import engine, Book
-# from models import Book
+# from database_setup import engine, Book
+from models import Book
+from sqlalchemy import create_engine
+
+
+engine = create_engine('mysql+mysqlconnector://art:artem@localhost/udemy_test')
 
 DBSession = sessionmaker(bind=engine)
 session = DBSession()

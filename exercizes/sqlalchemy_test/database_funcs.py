@@ -12,7 +12,7 @@ class Database:
             db = mysql.connector.connect(user=user, password=password,
                                          host=host)
             cursor = db.cursor()
-            cursor.execute(f"CREATE DATABASE {name}")  # .format(name))
+            cursor.execute(f"CREATE DATABASE {name} CHARACTER SET UTF8 COLLATE UTF8_UNICODE_CI")  # .format(name))
 
             self.bases[name] = db
         except mysql.connector.Error as err:
@@ -37,7 +37,7 @@ class Database:
 
 if __name__ == '__main__':
     b = Database()
-    base7 = b.create_base('testbooks', 'art', 'artem', 'localhost')
+    b.create_base('udemy_test', 'art', 'artem', 'localhost')
     # for i in range(2, 8):
-    # b.drop_base(f'basefromfunc', 'art', 'artem', 'localhost')
+    # b.drop_base(f'udemy_test', 'art', 'artem', 'localhost')
     print(b.bases)

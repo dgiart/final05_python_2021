@@ -15,8 +15,8 @@ def main():
 
 if __name__ == '__main__':
     print('hi from if...')
-    main()
+    # main()
 
-print(flask)
-foo()
-print('END')
+# print(flask)
+# foo()
+# print('END')
