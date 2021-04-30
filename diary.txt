@@ -16,3 +16,10 @@ create database udemy_test CHARACTER SET UTF8 COLLATE UTF8_UNICODE_CI
 _TODO:
 split processes: 1) create database, 2) create tables from models, 3) crud.
 
+30.04.21
+
+"PROMPT_DIRTRIM=3' - set bash PROMPT length
+book - changed
+employee - added
+migrations done
+
