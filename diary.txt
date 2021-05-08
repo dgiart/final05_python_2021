@@ -23,3 +23,10 @@ book - changed
 employee - added
 migrations done
 
+08/05/21, 18.23
+
+app_test created, structure created
+work with CRUD for simple model
+Object of type Departments is not JSON serializable
+
+
