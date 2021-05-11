@@ -5,7 +5,7 @@ from collections import Counter
 
 app = Flask(__name__)
 departments = []
-
+count = 0
 
 def correct_request(req_args, model_args):
     return Counter(req_args) == Counter(model_args)
@@ -13,9 +13,12 @@ def correct_request(req_args, model_args):
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
+    global count
     flask_request = request
     if flask_request.method == 'GET':
-        return {'departments': departments, 'Departments': Departments.dept_args}
+        dept_args = Departments.dept_args
+        # return {'Departments': dept_args}
+        return {'departments': departments, 'Departments': dept_args}
     if flask_request.method == 'POST':
         req_args = flask_request.args.to_dict()
         model_args = Departments.dept_args
@@ -23,9 +26,11 @@ def index():
         print(f'model_args = {model_args}')
         print(correct_request(req_args.keys(), model_args))
         if correct_request(req_args.keys(), model_args):
+            count += 1
             dep_name = req_args['name']
             dep_num = req_args['num']
-            department = Departments(dep_name, dep_num)
+            # department = Departments(dep_name, dep_num)
+            department = {'id': count, 'name': dep_name, 'num': dep_num}
             departments.append(department)
             print(departments)
             return flask_request.args
