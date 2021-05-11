@@ -1,11 +1,12 @@
 from models.models import Departments
-import random
+# import random
 from flask import Flask, request
 from collections import Counter
 
 app = Flask(__name__)
 departments = []
 count = 0
+
 
 def correct_request(req_args, model_args):
     return Counter(req_args) == Counter(model_args)
