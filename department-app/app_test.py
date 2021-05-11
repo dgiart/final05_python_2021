@@ -1,5 +1,5 @@
 from models.models import Departments
-import random
+# import random
 from flask import Flask, request
 from collections import Counter
 
