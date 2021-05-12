@@ -1,6 +1,6 @@
 from models.models import Departments
 # import random
-from flask import Flask, request
+from flask import Flask, request, render_template
 from collections import Counter
 
 app = Flask(__name__)
@@ -19,7 +19,8 @@ def index():
     if flask_request.method == 'GET':
         dept_args = Departments.dept_args
         # return {'Departments': dept_args}
-        return {'departments': departments, 'Departments': dept_args}
+        # return {'departments': departments, 'Departments': dept_args}
+        return render_template('index.html', departments=departments)#, n=name1, m=name2, list=l)
     if flask_request.method == 'POST':
         req_args = flask_request.args.to_dict()
         model_args = Departments.dept_args
