@@ -9,9 +9,9 @@ while True:
 
 
 
-    # title = input('title: ')
-    # author = input('author: ')
-    # genre = input('genre: ')
-    # book = Book(title, author, genre)
-    # db.session.add(book)
+    title = input('title: ')
+    author = input('author: ')
+    genre = input('genre: ')
+    book = Book(title, author, genre)
+    db.session.add(book)
     db.session.commit()

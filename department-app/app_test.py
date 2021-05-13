@@ -17,13 +17,14 @@ def index():
     global count
     flask_request = request
     if flask_request.method == 'GET':
-        dept_args = Departments.dept_args
+        # dept_args = Departments.dept_args
         # return {'Departments': dept_args}
         # return {'departments': departments, 'Departments': dept_args}
         return render_template('index.html', departments=departments)#, n=name1, m=name2, list=l)
     if flask_request.method == 'POST':
         req_args = flask_request.args.to_dict()
         model_args = Departments.dept_args
+        print(f'flask_request: {flask_request.args}')
         print(f'req_args = {req_args}')
         print(f'model_args = {model_args}')
         print(correct_request(req_args.keys(), model_args))
