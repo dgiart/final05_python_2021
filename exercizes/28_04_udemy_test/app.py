@@ -1,7 +1,9 @@
-from flask import Flask
+from flask import Flask, request
 import os
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_restful import Api, Resource
+
 # from models import Book
 
 basedir = os.path.abspath(os.path.dirname(__file__))
@@ -14,23 +16,36 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://art:artem@localh
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 Migrate(app, db)
-
+api = Api(app)
 import models
-#
-# class Book(db.Model):
-#     # __tablename__ = 'book'
-#
-#     id = db.Column(db.Integer, primary_key=True)
-#     title = db.Column(db.String(250), nullable=False)
-#     author = db.Column(db.String(250), nullable=False)
-#     genre = db.Column(db.String(250))
-#
-#     def __init__(self, title, author, genre):
-#         self.title = title
-#         self.author = author
-#         self.genre = genre
 
+
+class Employees(Resource):
+    def get(self, name, birth, salary):
+        employees = models.Employee.query.all()
+        print('hop from rest')
+        return str(len(employees))
+        # return 'employees'
+
+    def post(self, name, birth, salary):
+        print('WTF')
+        # posted_data = request.get_json()
+        # name = posted_data['name']
+        # birth = posted_data['birth']
+        # salary = posted_data['salary']
+        employee = models.Employee(name=name, birth=birth, salary=salary)
+        db.session.add(employee)
+        db.session.commit()
+
+
+@app.route('/')
+def hi():
+    print('hop')
+    return 'hi!'
+
+
+api.add_resource(Employees, '/employees/<string:name>&<string:birth>&<string:salary>')
 
 if __name__ == '__main__':
-    db.create_all()
+    app.run(debug=True)
 # db.drop_all()
