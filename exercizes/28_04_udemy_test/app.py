@@ -41,7 +41,7 @@ class Employees(Resource):
     def delete(name, birth, salary):
         employee = models.Employee.query.filter_by(name=name).first()
         if employee:
-            print(f'hop from rest get {name}')
+            print(f'hop from rest DEL {name}')
             db.session.delete(employee)
             db.session.commite()
             return f'employee {name} is deleted'
