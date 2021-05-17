@@ -1,4 +1,4 @@
-from app_old import db
+from app import db
 
 
 class Book(db.Model):

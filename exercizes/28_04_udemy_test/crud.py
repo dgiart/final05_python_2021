@@ -1,4 +1,4 @@
-from app import db
+from app_old import db
 from models import Book, Employee
 db.create_all()
 command = ''
