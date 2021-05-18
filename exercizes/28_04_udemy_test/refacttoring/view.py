@@ -1,4 +1,5 @@
 from flask_restful import Resource
+from flask import jsonify, request
 from app import app, db, api
 import models
 
@@ -9,7 +10,7 @@ class Employees(Resource):
         employee = models.Employee.query.filter_by(name=name).first()
         if employee:
             print(f'hop from rest get {name}')
-            return employee.__repr__()
+            return jsonify(employee.__repr__())
         else:
             return f'There is not emloyee with name {name}'
 
@@ -19,6 +20,12 @@ class Employees(Resource):
         employee = models.Employee(name=name, birth=birth, salary=salary)
         db.session.add(employee)
         db.session.commit()
+        print(f'New employee: {employee.__repr__()}')
+        to_return = {
+            'new emloyee':
+            employee.__repr__()
+        }
+        return to_return
 
     @staticmethod
     def delete(name, birth, salary):
@@ -32,17 +39,25 @@ class Employees(Resource):
             return f'There is not employee with name {name}'
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def hi():
-    print('hop')
-    return 'hi!'
+    if request.method == 'GET':
+        print('hop')
+        l = [True, 1, 2, 3]
+        return jsonify(l)
+        # return {'hi!': 'Hop! Hop!'}
+    if request.method == 'POST':
+
+        req = request.get_json()
+        print(f'POST to INDEX: {req}')
+        return jsonify(req)
 
 
 @app.route('/employees')
 def get_all():
     print('view.py')
     employees = models.Employee.query.all()
-    return {'emloyees': [employee.json() for employee in employees]}
+    return jsonify({'emloyees': [employee.json() for employee in employees]})
 
 
 @app.route('/employees/<string:name>')
@@ -50,7 +65,7 @@ def get(name):
     employee = models.Employee.query.filter_by(name=name).first()
     if employee:
         print(f'hop from rest get {name}')
-        return employee.__repr__()
+        return jsonify(employee.__repr__())
     else:
         return f'There is not emloyee with name {name}'
 
