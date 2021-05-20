@@ -48,13 +48,13 @@ def hi():
         # return {'hi!': 'Hop! Hop!'}
     if request.method == 'POST':
 
-        req = request.get_json()
-        print(f'REQ: {req}')
+        # req = request.get_json()
+        # print(f'REQ: {req}')
         r = (request.get_data())
         print(r)
-        print(f'POST to INDEX: {req}')
-        # return jsonify(r)
-        return jsonify(req)
+        # print(f'POST to INDEX: {req}')
+        return jsonify(r)
+        # return jsonify(req)
 
 
 @app.route('/employees')
