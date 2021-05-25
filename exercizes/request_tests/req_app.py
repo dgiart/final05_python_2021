@@ -10,6 +10,11 @@ def correct_request(req):
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'GET':
+        print(hash(request))
+        # url = request
+        # for el in dir(request):host_url
+        #     print(el)
+        print(f'remoute_addr:{request.remote_addr}')
         response = {
             1: 'one',
             2: 'two'

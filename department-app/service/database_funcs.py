@@ -1,5 +1,19 @@
 import mysql.connector
+from setup import db
 from mysql.connector import errorcode
+from models.models import Department, Employee
+
+
+def add_department(title):
+    department = Department(title=title)
+    db.session.add(department)
+    db.session.commit()
+
+
+def add_employee(name, salary, birth):
+    employee = Employee(name=name, salary=salary, birth=birth)
+    db.session.add(employee)
+    db.session.commit()
 
 
 class Database:
@@ -37,7 +51,7 @@ class Database:
 
 if __name__ == '__main__':
     b = Database()
-    b.create_base('sql_test', 'art', 'artem', 'localhost')
+    b.create_base('departments', 'art', 'artem', 'localhost')
     # for i in range(2, 8):
-    # b.drop_base(f'udemy_test', 'art', 'artem', 'localhost')
+    # b.drop_base(f'departments', 'art', 'artem', 'localhost')
     print(b.bases)

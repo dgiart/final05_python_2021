@@ -1,15 +1,21 @@
-import random
+import setup
+
+db = setup.db
 
 
-class Departments:
-    __id = 0
-    dept_args = ['id', 'name', 'num']
+class Department(db.Model):
+    id_dept = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(140))
 
-    def __init__(self, name='None', num=0):
-        self.name = name
-        self.num = num
-        Departments.__id += 1
-        self.id = Departments.__id
+    def __init__(self, title):
+        self.title = title
 
     def __repr__(self):
-        return f'id: {self.id}; name: {self.name}; employees: {self.num}'
+        return f'name: {self.title}, id={self.id_dep}'
+
+
+class Employee(db.Model):
+    id_empl = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(140))
+    salary = db.Column(db.Float)
+    birth = db.Column(db.Integer)
