@@ -1,5 +1,6 @@
 from flask import Flask
 from flask_restful import Resource, Api
+import tempfile
 from itertools import count
 from collections import Counter
 import requests
@@ -27,14 +28,15 @@ def foo(model='', **data ):
 
 
 if __name__ == '__main__':
+    print(tempfile.mkstemp())
     import sys
     # d1 = {1: 'one', 2: 'two'}
     # d2 = {2: 'two', 1: 'one'}
     # keys = [2, 1]
     # print(d1 == d2)
     # print(Counter(d1.keys()) == Counter(keys))
-    d = {'a': 'one'}
-    foo(model='MODEL', **d)
+    # d = {'a': 'one'}
+    # foo(model='MODEL', **d)
     # sqlalchemy.create_engine()
 
     # print(sqlalchemy.__version__)

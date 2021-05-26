@@ -1,70 +1,70 @@
-"""
-database_func.py
-~~~~~~~~~~~~
-
-This module implements functions which manipulate databases.
-
-"""
-
-
-
+# """
+# database_func.py
+# ~~~~~~~~~~~~
+#
+# This module implements functions which manipulate databases.
+#
+# """
+#
+#
+#
 import mysql.connector
-from setup import db
-from mysql.connector import errorcode
-from models.models import Department, Employee
-
-models_dict = {
-    'department': Department,
-    'employee': Employee
-}
-id_dict = {
-    'Department': 'id_dept',
-    'Employee': 'id_empl'
-}
-
-
-def add_item(model='', **data):
-    model_class = models_dict[model]
-    for el in dir(model_class):
-        print(el)
-    # if model == 'department':
-    #     title = data['title']
-    #     department = Department(title=title)
-    #     db.session.add(department)
-    #     db.session.commit()
-    #     return department.id_dept
-    # else:
-    #     pass
-
-
-def add_department(title):
-    """
-    Adds department to the database db
-    :param title: title of department to add
-    :return: id of added department
-    """
-    department = Department(title=title)
-    db.session.add(department)
-    db.session.commit()
-    return department.id_dept
-
-
-def get_departments():
-    departments = Department.query.all()
-    to_return = [{d.id_dept: d.title} for d in departments]
-    return to_return
-
-def get_department(dept_id):
-    department = Department.query.filter(Department.id_dept == dept_id).first()
-    to_return = {department.id_dept: department.title}
-    return to_return
-
-
-def add_employee(name, salary, birth):
-    employee = Employee(name=name, salary=salary, birth=birth)
-    db.session.add(employee)
-    db.session.commit()
-    return employee.id_empl
+# from setup import db
+# from mysql.connector import errorcode
+# from models.models import Department, Employee
+#
+# models_dict = {
+#     'department': Department,
+#     'employee': Employee
+# }
+# id_dict = {
+#     'Department': 'id_dept',
+#     'Employee': 'id_empl'
+# }
+#
+#
+# def add_item(model='', **data):
+#     model_class = models_dict[model]
+#     for el in dir(model_class):
+#         print(el)
+#     # if model == 'department':
+#     #     title = data['title']
+#     #     department = Department(title=title)
+#     #     db.session.add(department)
+#     #     db.session.commit()
+#     #     return department.id_dept
+#     # else:
+#     #     pass
+#
+#
+# def add_department(title):
+#     """
+#     Adds department to the database db
+#     :param title: title of department to add
+#     :return: id of added department
+#     """
+#     department = Department(title=title)
+#     db.session.add(department)
+#     db.session.commit()
+#     return department.id_dept
+#
+#
+# def get_departments():
+#     departments = Department.query.all()
+#     to_return = [{d.id_dept: d.title} for d in departments]
+#     return to_return
+#
+# def get_department(dept_id):
+#     department = Department.query.filter(Department.id_dept == dept_id).first()
+#     to_return = {department.id_dept: department.title}
+#     return to_return
+#
+#
+# def add_employee(name, salary, birth):
+#     employee = Employee(name=name, salary=salary, birth=birth)
+#     db.session.add(employee)
+#     db.session.commit()
+#     return employee.id_empl
 
 
 class Database:
