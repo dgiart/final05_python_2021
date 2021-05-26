@@ -3,17 +3,42 @@ from setup import db
 from mysql.connector import errorcode
 from models.models import Department, Employee
 
+models_dict = {
+    'department': Department,
+    'employee': Employee
+}
+id_dict = {
+    'Department': 'id_dept',
+    'Employee': 'id_empl'
+}
+
+
+def add_item(model='', **data ):
+    model_class = models_dict[model]
+    for el in dir(model_class):
+        print(el)
+    # if model == 'department':
+    #     title = data['title']
+    #     department = Department(title=title)
+    #     db.session.add(department)
+    #     db.session.commit()
+    #     return department.id_dept
+    # else:
+    #     pass
+
 
 def add_department(title):
     department = Department(title=title)
     db.session.add(department)
     db.session.commit()
+    return department.id_dept
 
 
 def add_employee(name, salary, birth):
     employee = Employee(name=name, salary=salary, birth=birth)
     db.session.add(employee)
     db.session.commit()
+    return employee.id_empl
 
 
 class Database:
