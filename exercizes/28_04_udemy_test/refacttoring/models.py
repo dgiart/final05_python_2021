@@ -34,3 +34,8 @@ class Employee(db.Model):
 
     def json(self):
         return {'id': self.eid, 'name': self.name}
+
+
+class test(db.Model):
+    eid = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(250), nullable=False)

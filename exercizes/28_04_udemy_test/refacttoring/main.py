@@ -1,5 +1,7 @@
+import sys
+sys.path.append("..")
 from app import app
-import view
+# import view
 
 
 if __name__ == '__main__':
