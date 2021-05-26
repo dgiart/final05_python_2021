@@ -2,7 +2,11 @@ from setup import api, app
 from flask_restful import Resource
 from flask import request, jsonify
 from models.models import Department
-from service.database_funcs import add_department, add_employee, add_item
+from service.database_funcs import add_department, add_employee, get_departments, get_department
+# from sys import path
+# path.append('.')
+# print(path)
+from rest.checkers import department_check
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -16,34 +20,22 @@ def index():
 
 
 class Departments(Resource):
-    # def post(self):
-    #     data = request.get_json()
-    #     title = data.get('title')
-    #     # print(type(department))
-    #     print(title)
-    #     item_id = add_department(title)
-    #     # data['id'] = item_id
-    #     department = {'title': 'title', 'id': item_id}
-    #     # print(department)
-    #     resp = jsonify(department)
-    #     resp.status_code = 200
-    #     return resp
-
-    def get(self):
-        p = request.path
-        print(p[1:])
-        return None
-
     def post(self):
         data = request.get_json()
-        model = request.path[1:]
-        item_id = add_item(model=model, **data)
-        print(item_id)
-        data['id']= item_id
-        resp = jsonify(data)
+        if not department_check(data):
+            return 'Bad Request', 400
+        title = data.get('title')
+        item_id = add_department(title)
+        department = {'title': title, 'id': item_id}
+        resp = jsonify(department)
         resp.status_code = 201
         return resp
 
+    def get(self):
+        departments = get_departments()
+        resp = jsonify(departments)
+        resp.status_code = 200
+        return resp
 
 
 class Employees(Resource):
@@ -51,7 +43,6 @@ class Employees(Resource):
         name = request.json.get('name')
         salary = request.json.get('salary')
         birth = request.json.get('birth')
-        print(name)
         item_id = add_employee(name, salary, birth)
         employee = {'id': item_id, 'name': name}
         resp = jsonify(employee)
@@ -64,5 +55,14 @@ class Employees(Resource):
         return None
 
 
-api.add_resource(Departments, '/department')
-api.add_resource(Employees, '/employee')
+class DepartmentItem(Resource):
+    def get(self, dept_id):
+        department = get_department(dept_id)
+        print(f"get department: {dept_id}")
+        resp = jsonify(department)
+        resp.status_code = 200
+        return resp
+
+api.add_resource(Departments, '/departments')
+api.add_resource(DepartmentItem, '/departments/<int:dept_id>')
+api.add_resource(Employees, '/employees')

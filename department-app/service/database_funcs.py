@@ -1,3 +1,13 @@
+"""
+database_func.py
+~~~~~~~~~~~~
+
+This module implements functions which manipulate databases.
+
+"""
+
+
+
 import mysql.connector
 from setup import db
 from mysql.connector import errorcode
@@ -13,7 +23,7 @@ id_dict = {
 }
 
 
-def add_item(model='', **data ):
+def add_item(model='', **data):
     model_class = models_dict[model]
     for el in dir(model_class):
         print(el)
@@ -28,10 +38,26 @@ def add_item(model='', **data ):
 
 
 def add_department(title):
+    """
+    Adds department to the database db
+    :param title: title of department to add
+    :return: id of added department
+    """
     department = Department(title=title)
     db.session.add(department)
     db.session.commit()
     return department.id_dept
+
+
+def get_departments():
+    departments = Department.query.all()
+    to_return = [{d.id_dept: d.title} for d in departments]
+    return to_return
+
+def get_department(dept_id):
+    department = Department.query.filter(Department.id_dept == dept_id).first()
+    to_return = {department.id_dept: department.title}
+    return to_return
 
 
 def add_employee(name, salary, birth):

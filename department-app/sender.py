@@ -1,11 +1,15 @@
 import requests
 import socket
+import service.database_funcs
 
 if __name__ == '__main__':
+    print(help(requests))
 
-    to_post = {'y': 100}
+    to_post = {'title': 'from sender 4'}
     # data = {'data': 1000}
-    req = requests.post('http://127.0.0.1:5000', data=to_post) #, json=to_post)
+    # req = requests.post('http://127.0.0.1:5000/department', json=to_post)
+    # resp = req.json()
+    # print(resp)
     # req = requests.get('http://{}:8000'.format(socket.gethostbyname(socket.gethostname())))
     # res = req.content
     # print(res)
