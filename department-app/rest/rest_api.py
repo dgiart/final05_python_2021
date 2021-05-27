@@ -1,11 +1,7 @@
 from setup import api, app
 from flask_restful import Resource
 from flask import request, jsonify
-from models.models import Department
 from service.database_funcs import add_department, add_employee, get_departments, get_department
-# from sys import path
-# path.append('.')
-# print(path)
 from rest.checkers import department_check
 
 
@@ -63,6 +59,7 @@ class DepartmentItem(Resource):
         resp.status_code = 200
         return resp
 
-api.add_resource(Departments, '/departments')
-api.add_resource(DepartmentItem, '/departments/<int:dept_id>')
-api.add_resource(Employees, '/employees')
+
+# api.add_resource(Departments, '/departments')
+# api.add_resource(DepartmentItem, '/departments/<int:dept_id>')
+# api.add_resource(Employees, '/employees')

@@ -13,4 +13,5 @@ db = SQLAlchemy(app)
 import models.models
 Migrate(app, db)
 api = Api(app)
+# dept_api = Api(departments_blueprint)
 db.create_all()
