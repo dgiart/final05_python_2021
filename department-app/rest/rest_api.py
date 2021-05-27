@@ -3,7 +3,7 @@ from flask_restful import Resource
 from flask import request, jsonify
 from service.database_funcs import add_department, add_employee, get_departments, get_department
 from rest.checkers import department_check
-
+from setup import app
 
 @app.route('/', methods=['POST', 'GET'])
 def index():
