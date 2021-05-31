@@ -4,11 +4,6 @@ from datetime import datetime
 db = setup.db
 
 
-# depts_empls=db.Table('depts_empls',
-#     db.Column('id_dept', db.Integer, db.ForeignKey('department.id_dept')),
-#     db.Column('id_empl', db.Integer, db.ForeignKey('employee.id_empl'))
-#
-# )
 
 
 class Department(db.Model):
