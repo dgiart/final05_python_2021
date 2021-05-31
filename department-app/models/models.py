@@ -14,26 +14,26 @@ db = setup.db
 class Department(db.Model):
     id_dept = db.Column(db.Integer, primary_key=True, autoincrement=True)
     title = db.Column(db.String(140))
-    # employees = db.relationship('Employee', secondary=depts_empls,  backref='department', lazy='dynamic')
+    employees = db.relationship('Employee', backref='employee_department')
 
 
     def __init__ (self, *args, **kwargs):
         super(Department, self). __init__(*args, **kwargs)
 
     def __repr__(self):
-        return f'title: {self.title}, id={self.id_dep})'#, employees={self.employees}'
+        return f'title: {self.title}, id={self.id_dept})'#, employees={self.employees}'
 
 
 class Employee(db.Model):
-    id_empl = db.Column(db.Integer, primary_key=True)
+    id_empl = db.Column(db.Integer, primary_key=True, autoincrement=True)
     name = db.Column(db.String(140))
     salary = db.Column(db.Float)
     birthday = db.Column(db.DateTime)
-    id_dept = db.Column(db.Integer)#, db.ForeignKey('department.id_dept'))
+    id_empl_dept = db.Column(db.Integer, db.ForeignKey('department.id_dept'))
 
     def __init__ (self, *args, **kwargs):
         super(Employee, self). __init__(*args, **kwargs)
 
     def __repr__(self):
-        return f'id: {self.id_empl}, name: {self.name}, birthday: {self.birthday}, department: {self.id_dept}'
+        return f'id: {self.id_empl}, name: {self.name}, birthday: {self.birthday}, department: {self.id_empl_dept}'
 

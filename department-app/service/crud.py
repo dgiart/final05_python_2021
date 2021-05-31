@@ -90,7 +90,7 @@ def get_employees():
     :return: list of emloyees dictionaris
     """
     emloyees = Employee.query.all()
-    to_return = [{'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birth': employee.birth} for
+    to_return = [{'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birth': employee.birthday} for
                  employee in emloyees]
     return to_return
 
