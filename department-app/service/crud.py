@@ -69,7 +69,7 @@ Employees functions
 """
 
 
-def add_employee(name, salary, birth):
+def add_employee(name, salary, birthday, id_empl_dept):
     """
     Adds employee to the database db
     :param name: name of employee
@@ -77,7 +77,7 @@ def add_employee(name, salary, birth):
     :param birth: birth year employee
     :return: employee id
     """
-    employee = Employee(name=name, salary=salary, birth=birth)
+    employee = Employee(name=name, salary=salary, birthday=birthday, id_empl_dept=id_empl_dept)
     db.session.add(employee)
     db.session.commit()
     return employee.id_empl

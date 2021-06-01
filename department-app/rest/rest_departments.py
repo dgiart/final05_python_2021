@@ -2,7 +2,7 @@ from flask import Blueprint, jsonify, request
 from flask_restful import Resource, Api
 from service.crud import add_department, get_departments, get_department, del_department
 from rest.checkers import department_check
-
+from models.models import department_keys
 departments_blueprint = Blueprint('departments', __name__)
 dept_api = Api(departments_blueprint)
 
@@ -10,7 +10,7 @@ dept_api = Api(departments_blueprint)
 class Departments(Resource):
     def post(self):
         data = request.get_json()
-        if not department_check(data):
+        if not department_check(data, department_keys):
             return 'Bad Request', 400
         title = data.get('title')
         item_id = add_department(title)

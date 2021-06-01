@@ -44,17 +44,19 @@ from collections import Counter
 
 
 if __name__ == '__main__':
-
-    e1= Employee(name='TestEmpl')
+    # print(datetime.now().date())
+    e2= Employee.query.filter_by(id_empl=2).first()
+    print(e2.birthday.year)
     # e1.id_empl = 10000
-    e1.birthday = datetime.now().date()
-    e1.id_dept = 10000
-    d1 = Department(title='NewModelTest')
-    d1.id_dep = 10000
-    d1.employees.append(e1)
-    db.session.add(d1)#, d1)
-    db.session.commit()
-    print(e1)
+    # e2.birthday = datetime.now().date()
+    # e2.id_empl_dept = 1
+    # d1 = Department.query.filter_by(id_dept=1).first()
+    # d1.title = 'study'
+    # db.session.add(e2)
+    # db.session.add(d1)
+    # db.session.commit()
+    # for empl in d1.employees:
+    #     print(f'{empl.name}, {empl.salary}')
     # print(d1.employees)
 
 

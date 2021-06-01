@@ -3,7 +3,8 @@ from datetime import datetime
 
 db = setup.db
 
-
+department_keys = ['title']
+employee_keys = ['name', 'salary', 'birthday', 'id_empl_dept']
 
 
 class Department(db.Model):
@@ -16,7 +17,7 @@ class Department(db.Model):
         super(Department, self). __init__(*args, **kwargs)
 
     def __repr__(self):
-        return f'title: {self.title}, id={self.id_dept})'#, employees={self.employees}'
+        return f'Department: id={self.id_dept}, title: {self.title})'#, employees={self.employees}'
 
 
 class Employee(db.Model):
@@ -30,5 +31,5 @@ class Employee(db.Model):
         super(Employee, self). __init__(*args, **kwargs)
 
     def __repr__(self):
-        return f'id: {self.id_empl}, name: {self.name}, birthday: {self.birthday}, department: {self.id_empl_dept}'
+        return f'Employee: id: {self.id_empl}, name: {self.name}, birthday: {self.birthday}, department: {self.id_empl_dept}'
 
