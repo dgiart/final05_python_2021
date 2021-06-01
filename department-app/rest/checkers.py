@@ -2,8 +2,6 @@ from collections import Counter
 from datetime import datetime
 
 
-# department_keys = ['title']
-
 def has_value(data: dict, model_keys: list) -> bool:
     for key in model_keys:
         if not data.get(key):
@@ -15,6 +13,8 @@ def has_value(data: dict, model_keys: list) -> bool:
 def get_date(date):
     try:
         date = datetime(date.get('year'), date.get('month'), date.get('day'))
+        print(date)
+        print(date.date())
         return date.date()
     except ValueError as e:
         print(e)

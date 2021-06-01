@@ -5,6 +5,7 @@ crud.py
 This module implements CRUD functions for departments and employees.
 
 """
+from datetime import datetime, date
 from setup import db
 from models.models import Department, Employee
 
@@ -31,7 +32,9 @@ def get_departments():
     :return: list of departments
     """
     departments = Department.query.all()
-    to_return = [{d.id_dept: d.title} for d in departments]
+    to_return = [{'id': department.id_dept, 'title': department.title, 'employees': [
+        {'id': employee.id_empl, 'name': employee.name} for employee in department.employees]} for department in
+                 departments]
     return to_return
 
 
@@ -43,7 +46,9 @@ def get_department(dept_id):
     """
     department = Department.query.filter(Department.id_dept == dept_id).first()
     if department:
-        to_return = {department.id_dept: department.title}
+        to_return = {'id': department.id_dept, 'title': department.title,
+                     'employees': [{'id': employee.id_empl, 'name': employee.name} for employee in
+                                   department.employees]}
         return to_return
     else:
         return None
@@ -63,6 +68,13 @@ def del_department(dept_id):
     else:
         return None
 
+def put_department(id_dept, title):
+    department = Department.query.filter(Department.id_dept == id_dept).first()
+    department.title = title
+    db.session.commit()
+    return id_dept
+
+
 
 """
 Employees functions
@@ -72,9 +84,11 @@ Employees functions
 def add_employee(name, salary, birthday, id_empl_dept):
     """
     Adds employee to the database db
+    :param id_empl_dept: id of department
+    :param birthday: birthday of employee
     :param name: name of employee
     :param salary: slary of employee
-    :param birth: birth year employee
+
     :return: employee id
     """
     employee = Employee(name=name, salary=salary, birthday=birthday, id_empl_dept=id_empl_dept)
@@ -86,21 +100,50 @@ def add_employee(name, salary, birthday, id_empl_dept):
 def get_employees():
     """
     Get all employees
-    :param id_empl: employee's id
-    :return: list of emloyees dictionaris
+    :return: list of employees dictionaries
     """
-    emloyees = Employee.query.all()
-    to_return = [{'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birth': employee.birthday} for
-                 employee in emloyees]
+    employees = Employee.query.all()
+    to_return = [
+        {'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birthday': employee.birthday,
+         'department': employee.id_empl_dept} for
+        employee in employees]
     return to_return
 
 
 def get_employee(id_empl):
     """
     Get one department by id.
-    :param dept_id: department's id
+    :param id_empl: department's id
     :return: department {id: title}
     """
     employee = Employee.query.filter(Employee.id_empl == id_empl).first()
-    to_return = {'id': employee.id_empl, 'name': employee.name, 'salary': employee.salary, 'birth': employee.birth}
+    to_return = {'id': employee.id_empl, 'name': employee.name, 'salary': employee.salary,
+                 'birthday!!!': employee.birthday, 'department': employee.id_empl_dept}
     return to_return
+
+
+def del_employee(id_empl):
+    """
+    Delete department from db
+    :param dept_id:
+    :return:
+    """
+    employee = Employee.query.filter(Employee.id_empl == id_empl).first()
+    if employee:
+        db.session.delete(employee)
+        db.session.commit()
+        return id_empl
+    else:
+        return None
+
+
+def put_employee(id_empl, name, salary, birthday, id_empl_dept):
+    employee = Employee.query.filter(Employee.id_empl == id_empl).first()
+    employee.name = name
+    employee.salary = salary
+    employee.birthday = birthday
+    employee.id_empl_dept = id_empl_dept
+    # db.session.
+    db.session.commit()
+    return id_empl
+

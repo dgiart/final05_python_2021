@@ -46,17 +46,17 @@ from collections import Counter
 if __name__ == '__main__':
     # print(datetime.now().date())
     e2= Employee.query.filter_by(id_empl=2).first()
-    print(e2.birthday.year)
+    # print(e2.birthday.year)
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    # d1 = Department.query.filter_by(id_dept=1).first()
+    d1 = Department.query.filter_by(id_dept=1).first()
     # d1.title = 'study'
     # db.session.add(e2)
     # db.session.add(d1)
     # db.session.commit()
-    # for empl in d1.employees:
-    #     print(f'{empl.name}, {empl.salary}')
+    for empl in d1.employees:
+        print(f'{empl.name}, {empl.salary}')
     # print(d1.employees)
 
 
