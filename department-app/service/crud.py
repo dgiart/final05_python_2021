@@ -33,20 +33,21 @@ def get_departments():
     """
     departments = Department.query.all()
     to_return = [{'id': department.id_dept, 'title': department.title, 'employees': [
-        {'id': employee.id_empl, 'name': employee.name} for employee in department.employees]} for department in
+        {'id': employee.id_empl, 'name': employee.name} for employee in department.employees], 'average salary': get_average_salary(department.id_dept)} for department in
                  departments]
     return to_return
 
 
-def get_department(dept_id):
+def get_department(id_dept):
     """
     Get one department by id.
-    :param dept_id: department's id
+    :param id_dept: department's id
     :return: department {id: title}
     """
-    department = Department.query.filter(Department.id_dept == dept_id).first()
+    department = Department.query.filter(Department.id_dept == id_dept).first()
     if department:
-        to_return = {'id': department.id_dept, 'title': department.title,
+        average_salary = get_average_salary(id_dept)
+        to_return = {'id': department.id_dept, 'title': department.title, 'average salary': average_salary,
                      'employees': [{'id': employee.id_empl, 'name': employee.name} for employee in
                                    department.employees]}
         return to_return
@@ -68,12 +69,21 @@ def del_department(dept_id):
     else:
         return None
 
+
 def put_department(id_dept, title):
     department = Department.query.filter(Department.id_dept == id_dept).first()
     department.title = title
     db.session.commit()
     return id_dept
 
+
+def get_average_salary(id_dept):
+    department = Department.query.filter_by(id_dept=id_dept).first()
+    employees = department.employees
+    salary = 0
+    for employee in employees:
+        salary += employee.salary
+    return (salary / len(employees)).__round__(2)
 
 
 """
@@ -146,4 +156,3 @@ def put_employee(id_empl, name, salary, birthday, id_empl_dept):
     # db.session.
     db.session.commit()
     return id_empl
-

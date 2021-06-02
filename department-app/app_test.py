@@ -71,7 +71,7 @@ def calculate_age(born):
 
 
 def get_average_salary(id_dept):
-    department = Department.query.filter_by(id_dept=1).first()
+    department = Department.query.filter_by(id_dept=id_dept).first()
     employees = department.employees
     salary = 0
     for employee in employees:
