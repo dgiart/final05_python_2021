@@ -28,6 +28,7 @@ class Departments(Resource):
         return resp
 
     def get(self):
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         departments = get_departments()
         resp = jsonify(departments)
         resp.status_code = 200

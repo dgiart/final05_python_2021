@@ -1,9 +1,13 @@
 from models.models import Department, Employee
+import random
 from datetime import datetime
 from setup import db
+from datetime import date
+# from numpy import np
 # import random
 from flask import Flask, request, render_template
 from collections import Counter
+
 
 # app = Flask(__name__)
 # departments = []
@@ -41,22 +45,54 @@ from collections import Counter
 #             return flask_request.args
 #         else:
 #             return 'Wrong request'
+def add_dept_to_empl():
+    depts = [1, 2, 4, 5, 43]
+    # print(datetime.now().date())
+    employees = Employee.query.all()
+    for empl in employees:
+        i = random.randint(0, 4)
+        empl.id_empl_dept = depts[i]
+
+
+def add_birth_to_empl():
+    employees = Employee.query.all()
+    for empl in employees:
+        year = random.randint(1970, 2001)
+        month = random.randint(1, 12)
+        day = random.randint(1, 30)
+
+        print(date(year, month, day))
+        empl.birthday = date(year, month, day)
+
+
+def calculate_age(born):
+    today = date.today()
+    return today.year - born.year - ((today.month, today.day) < (born.month, born.day))
+
+
+def get_average_salary(id_dept):
+    department = Department.query.filter_by(id_dept=1).first()
+    employees = department.employees
+    salary = 0
+    for employee in employees:
+        salary += employee.salary
+    return (salary / len(employees)).__round__(2)
 
 
 if __name__ == '__main__':
-    # print(datetime.now().date())
-    e2= Employee.query.filter_by(id_empl=2).first()
+    print(get_average_salary(1))
+    # add_birth_to_empl()
+    # add_dept_to_empl()
     # print(e2.birthday.year)
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    d1 = Department.query.filter_by(id_dept=1).first()
+    # d1 = Department.query.filter_by(id_dept=1).first()
     # d1.title = 'study'
     # db.session.add(e2)
     # db.session.add(d1)
     # db.session.commit()
-    for empl in d1.employees:
-        print(f'{empl.name}, {empl.salary}')
     # print(d1.employees)
-
-
+    # for empl in d1.employees:
+    #     print(f'{empl.name}, {empl.salary}, {empl.birthday.year}')
+    # print(d1.employees)

@@ -10,6 +10,7 @@ empl_api = Api(rest_employees_blueprint)
 
 class Employees(Resource):
     def post(self):
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         data = request.json
         birthday = employee_check(data, employee_keys)
         print(f'birthday: {birthday}')
@@ -26,6 +27,7 @@ class Employees(Resource):
         return resp
 
     def get(self):
+        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         employees = get_employees()
         resp = jsonify(employees)
         resp.status_code = 200
