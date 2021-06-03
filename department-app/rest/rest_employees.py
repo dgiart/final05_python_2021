@@ -16,6 +16,7 @@ class Employees(Resource):
         print(f'birthday: {birthday}')
         if not birthday:
             return 'Bad Request', 400
+        #jjjjj
         name = data.get('name')
         salary = data.get('salary')
         id_empl_dept = data.get('id_empl_dept')
