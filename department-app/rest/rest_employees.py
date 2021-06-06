@@ -12,8 +12,11 @@ class Employees(Resource):
     def post(self):
         print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         data = request.json
-        birthday = employee_check(data, employee_keys)
-        print(f'birthday: {birthday}')
+        print(data)
+        try:
+            birthday = employee_check(data, employee_keys)
+        except TypeError as e:
+            print(f'TypeError in post: {e}')
         if not birthday:
             return 'Bad Request', 400
         #jjjjj

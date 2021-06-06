@@ -14,7 +14,11 @@ def index():
         print(data)
         # print(request.mimetype)
         return jsonify({'data': data}), 201
-    return 'Hop from dep'
+    data = request.get_json(cache=True)
+    print(f'data: {data}')
+    print(f"GET: {jsonify({'data': data})}")
+    return jsonify({'data': data}), 201
+    # return 'Hop from dep'
 
 
 if __name__ == '__main__':

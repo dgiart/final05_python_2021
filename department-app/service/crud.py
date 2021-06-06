@@ -113,6 +113,7 @@ def get_employees():
     :return: list of employees dictionaries
     """
     employees = Employee.query.all()
+    # employees = [employee for employee in Employee.query.all() if employee.birthday.year >= 1983]
     to_return = [
         {'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birthday': employee.birthday,
          'department': employee.id_empl_dept} for
@@ -122,20 +123,20 @@ def get_employees():
 
 def get_employee(id_empl):
     """
-    Get one department by id.
-    :param id_empl: department's id
-    :return: department {id: title}
+    Get one employee by id.
+    :param id_empl: employee's id
+    :return: employee {id: title}
     """
     employee = Employee.query.filter(Employee.id_empl == id_empl).first()
     to_return = {'id': employee.id_empl, 'name': employee.name, 'salary': employee.salary,
-                 'birthday!!!': employee.birthday, 'department': employee.id_empl_dept}
+                 'birthday': employee.birthday, 'department': employee.id_empl_dept}
     return to_return
 
 
 def del_employee(id_empl):
     """
-    Delete department from db
-    :param dept_id:
+    Delete employee from db
+    :param id_empl:
     :return:
     """
     employee = Employee.query.filter(Employee.id_empl == id_empl).first()

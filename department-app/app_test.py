@@ -80,7 +80,24 @@ def get_average_salary(id_dept):
 
 
 if __name__ == '__main__':
-    print(get_average_salary(1))
+    # print(get_average_salary(1))
+    employees = Employee.query.all()
+    # def foo(a):
+    #     print(a)
+    # l = [1, 2, 3]
+    # m = map(print, l)
+    # tuple(m)
+    # print('\n ************************************************************************************************\n')
+    # print(f'm = {list(m)}')
+    # print(f'l = {l}')
+    # ees = list(map(lambda employee: employee.birthday.year >= 1983, [employee for employee in employees ]))#if employee.birthday.year >= 1983]))
+    ees = [employee for employee in employees if datetime(1983, 8, 5) <= employee.birthday <= datetime(1983, 8, 5)]
+    print(ees)
+    # for employee in employees:
+    #     if employee.birthday.year == 1983:
+    #         print(employee)
+    # for el in dir(Employee.birthday):
+    #     print(el)
     # add_birth_to_empl()
     # add_dept_to_empl()
     # print(e2.birthday.year)

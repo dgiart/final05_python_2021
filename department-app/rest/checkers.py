@@ -4,7 +4,11 @@ from datetime import datetime
 
 def has_value(data: dict, model_keys: list) -> bool:
     for key in model_keys:
-        if not data.get(key):
+        try:
+            if not data.get(key):
+                return False
+        except AttributeError as e:
+            print(f'AttributeError in check {e}')
             return False
     return True
 
@@ -20,7 +24,9 @@ def get_date(date):
 def department_check(data: dict, model_keys: list) -> bool:
     if not has_value(data, model_keys) or not (Counter(data.keys()) == Counter(model_keys)) or not isinstance(
             data['title'], str):
+
         return False
+
     return True
 
 
@@ -29,7 +35,8 @@ def employee_check(data: dict, model_keys: list) -> bool:
             or not isinstance(data['name'], str) \
             or not isinstance(data['salary'], float) \
             or not isinstance(data['birthday'], dict):
-        print('here: {},')
+        print(f'department_check returns False')
         return False
     else:
+        print(f'employee_check returns birthday')
         return get_date(data['birthday'])
