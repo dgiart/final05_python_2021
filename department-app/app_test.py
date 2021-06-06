@@ -80,18 +80,18 @@ def get_average_salary(id_dept):
 
 
 if __name__ == '__main__':
-    print(get_average_salary(1))
+    # print(get_average_salary(1))
     # add_birth_to_empl()
     # add_dept_to_empl()
     # print(e2.birthday.year)
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    # d1 = Department.query.filter_by(id_dept=1).first()
-    # d1.title = 'study'
+    d1 = Department.query.filter_by(id_dept=1).first()
+    d1.title = 'study'
     # db.session.add(e2)
     # db.session.add(d1)
-    # db.session.commit()
+    db.session.commit()
     # print(d1.employees)
     # for empl in d1.employees:
     #     print(f'{empl.name}, {empl.salary}, {empl.birthday.year}')
