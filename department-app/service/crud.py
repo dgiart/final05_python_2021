@@ -107,13 +107,32 @@ def add_employee(name, salary, birthday, id_empl_dept):
     return employee.id_empl
 
 
-def get_employees():
+# def get_employees(start_day, end_day, start_month, end_month, start_year, end_year):
+def get_employees(*args):
     """
     Get all employees
     :return: list of employees dictionaries
     """
-    employees = Employee.query.all()
-    # employees = [employee for employee in Employee.query.all() if employee.birthday.year >= 1983]
+
+    # [employee for employee in employees if datetime(1983, 8, 5) <= employee.birthday <= datetime(1983, 8, 5)]
+    if not args:
+        employees = Employee.query.all()
+    else:
+        try:
+            print(f'dates: {args}')
+            start_tuple = args[0][:3]
+            end_tuple = args[0][3:]
+            print(f'start_tuple: {start_tuple}')
+            print(f'end_tuple: {end_tuple}')
+            start_year, start_month, start_day = tuple(map(lambda x: int(x), start_tuple))
+            start_date = datetime(start_year, start_month, start_day)
+            and_year, end_month, end_day = tuple(map(lambda x: int(x), end_tuple))
+            end_date = datetime(and_year, end_month, end_day)
+            employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date]
+        except TypeError as te:
+            # print(te)
+            employees = Employee.query.all()
+    # employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date ]
     to_return = [
         {'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birthday': employee.birthday,
          'department': employee.id_empl_dept} for

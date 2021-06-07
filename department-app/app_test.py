@@ -78,10 +78,24 @@ def get_average_salary(id_dept):
         salary += employee.salary
     return (salary / len(employees)).__round__(2)
 
-
+def foo(*args):
+    return(args)
 if __name__ == '__main__':
+    int(None)
+    t = '1', '2', '3'
+    print(foo())
+    a, b, c = t
+    m = map(lambda x: int(x), t)
+    z = zip(t, m)
+    print(dict(z))
+    # x = int(None)
+    # try:
+    #     date_ = date(20, 12)
+    # except TypeError as te:
+    #     date_ = date(1, 1, 1)
+    # print(date_)
     # print(get_average_salary(1))
-    employees = Employee.query.all()
+    # employees = Employee.query.all()
     # def foo(a):
     #     print(a)
     # l = [1, 2, 3]
@@ -91,8 +105,8 @@ if __name__ == '__main__':
     # print(f'm = {list(m)}')
     # print(f'l = {l}')
     # ees = list(map(lambda employee: employee.birthday.year >= 1983, [employee for employee in employees ]))#if employee.birthday.year >= 1983]))
-    ees = [employee for employee in employees if datetime(1983, 8, 5) <= employee.birthday <= datetime(1983, 8, 5)]
-    print(ees)
+    # ees = [employee for employee in employees if datetime(1983, 8, 5) <= employee.birthday <= datetime(1983, 8, 5)]
+    # print(ees)
     # for employee in employees:
     #     if employee.birthday.year == 1983:
     #         print(employee)

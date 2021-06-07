@@ -35,7 +35,7 @@ def employee_check(data: dict, model_keys: list) -> bool:
             or not isinstance(data['name'], str) \
             or not isinstance(data['salary'], float) \
             or not isinstance(data['birthday'], dict):
-        print(f'department_check returns False')
+        print(f'employee_check returns False')
         return False
     else:
         print(f'employee_check returns birthday')
