@@ -31,11 +31,12 @@ def department_check(data: dict, model_keys: list) -> bool:
 
 
 def employee_check(data: dict, model_keys: list) -> bool:
+    print(f'model_keys = {model_keys}')
     if not has_value(data, model_keys) or not (Counter(data.keys()) == Counter(model_keys)) \
             or not isinstance(data['name'], str) \
             or not isinstance(data['salary'], float) \
             or not isinstance(data['birthday'], dict):
-        print(f'department_check returns False')
+        print(f'employee_check returns False')
         return False
     else:
         print(f'employee_check returns birthday')

@@ -46,12 +46,12 @@ from collections import Counter
 #         else:
 #             return 'Wrong request'
 def add_dept_to_empl():
-    depts = [1, 2, 4, 5, 43]
+    depts = [1]#, 2, 4, 5, 43]
     # print(datetime.now().date())
     employees = Employee.query.all()
     for empl in employees:
-        i = random.randint(0, 4)
-        empl.id_empl_dept = depts[i]
+        # i = random.randint(0, 4)
+        empl.id_empl_dept = depts[0]
 
 
 def add_birth_to_empl():
@@ -80,8 +80,9 @@ def get_average_salary(id_dept):
 
 
 if __name__ == '__main__':
+    add_dept_to_empl()
     # print(get_average_salary(1))
-    employees = Employee.query.all()
+    # employees = Employee.query.all()
     # def foo(a):
     #     print(a)
     # l = [1, 2, 3]
@@ -91,8 +92,8 @@ if __name__ == '__main__':
     # print(f'm = {list(m)}')
     # print(f'l = {l}')
     # ees = list(map(lambda employee: employee.birthday.year >= 1983, [employee for employee in employees ]))#if employee.birthday.year >= 1983]))
-    ees = [employee for employee in employees if datetime(1983, 8, 5) <= employee.birthday <= datetime(1983, 8, 5)]
-    print(ees)
+    # ees = [employee for employee in employees if datetime(1983, 8, 5) <= employee.birthday <= datetime(1983, 8, 5)]
+    # print(ees)
     # for employee in employees:
     #     if employee.birthday.year == 1983:
     #         print(employee)
@@ -104,12 +105,12 @@ if __name__ == '__main__':
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    # d1 = Department.query.filter_by(id_dept=1).first()
+    d1 = Department.query.filter_by(id_dept=1).first()
     # d1.title = 'study'
     # db.session.add(e2)
     # db.session.add(d1)
     # db.session.commit()
     # print(d1.employees)
-    # for empl in d1.employees:
-    #     print(f'{empl.name}, {empl.salary}, {empl.birthday.year}')
-    # print(d1.employees)
+    for empl in d1.employees:
+        print(f'{empl.name}, {empl.salary}, {empl.birthday.year}')
+    print(d1.employees)
