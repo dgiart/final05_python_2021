@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<table>
+    <tr>
+        <td><h2> id: {{ employee['id'] }},</h2></td> <td><h2>Name: {{ employee['name'] }},  </h2></td> <td><h2>Salary: {{ employee['salary']}},</h2></td>
+        <td><h2>Birthday: {{ employee['birthday'] }},</h2></td> <td><h2>Department: {{ employee['department'] }} .</h2></td>
+    </tr>
+</table>
+
+{% endblock %}

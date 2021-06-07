@@ -13,6 +13,8 @@ class Employees(Resource):
         print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         data = request.json
         print(data)
+        if not data:
+            return 'Bad Request', 400
         try:
             birthday = employee_check(data, employee_keys)
         except TypeError as e:
@@ -32,7 +34,18 @@ class Employees(Resource):
 
     def get(self):
         print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-        employees = get_employees()
+        if not request.args:
+            employees = get_employees()
+        else:
+            start_day = request.args.get('start_day')
+            end_day = request.args.get('end_day')
+            start_month = request.args.get('start_month')
+            end_month = request.args.get('end_month')
+            start_year = request.args.get('start_year')
+            end_year = request.args.get('end_year')
+            dates = start_year, start_month, start_day, end_year, end_month, end_day
+            employees = get_employees(dates)
+        # employees = get_employees(start_day, end_day, start_month, end_month, start_year, end_year)
         resp = jsonify(employees)
         resp.status_code = 200
         return resp

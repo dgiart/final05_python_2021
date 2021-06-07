@@ -1,4 +1,5 @@
 from models.models import Department, Employee
+from datetime import date
 import pytest
 
 
@@ -6,8 +7,8 @@ import pytest
 def employee_to_test():
     name = 'Jon'
     salary = 5000
-    birth = 1979
-    employee = Employee(name=name, salary=salary, birth=birth)
+    birthday = date(1979, 3, 15)
+    employee = Employee(name=name, salary=salary, birthday=birthday)
     yield employee
 
 
@@ -25,4 +26,4 @@ def test_employee_salary(employee_to_test):
 
 
 def test_employee_birth(employee_to_test):
-    assert employee_to_test.birth == 1979
+    assert employee_to_test.birthday.year == 1979

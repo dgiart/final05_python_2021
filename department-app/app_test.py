@@ -46,12 +46,12 @@ from collections import Counter
 #         else:
 #             return 'Wrong request'
 def add_dept_to_empl():
-    depts = [1]#, 2, 4, 5, 43]
+    depts = [1, 2, 4, 5, 43]
     # print(datetime.now().date())
     employees = Employee.query.all()
     for empl in employees:
-        # i = random.randint(0, 4)
-        empl.id_empl_dept = depts[0]
+        i = random.randint(0, 4)
+        empl.id_empl_dept = depts[i]
 
 
 def add_birth_to_empl():
@@ -78,9 +78,22 @@ def get_average_salary(id_dept):
         salary += employee.salary
     return (salary / len(employees)).__round__(2)
 
-
+def foo(*args):
+    return(args)
 if __name__ == '__main__':
-    add_dept_to_empl()
+    int(None)
+    t = '1', '2', '3'
+    print(foo())
+    a, b, c = t
+    m = map(lambda x: int(x), t)
+    z = zip(t, m)
+    print(dict(z))
+    # x = int(None)
+    # try:
+    #     date_ = date(20, 12)
+    # except TypeError as te:
+    #     date_ = date(1, 1, 1)
+    # print(date_)
     # print(get_average_salary(1))
     # employees = Employee.query.all()
     # def foo(a):
@@ -105,12 +118,12 @@ if __name__ == '__main__':
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    d1 = Department.query.filter_by(id_dept=1).first()
+    # d1 = Department.query.filter_by(id_dept=1).first()
     # d1.title = 'study'
     # db.session.add(e2)
     # db.session.add(d1)
     # db.session.commit()
     # print(d1.employees)
-    for empl in d1.employees:
-        print(f'{empl.name}, {empl.salary}, {empl.birthday.year}')
-    print(d1.employees)
+    # for empl in d1.employees:
+    #     print(f'{empl.name}, {empl.salary}, {empl.birthday.year}')
+    # print(d1.employees)
