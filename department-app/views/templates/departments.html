@@ -13,8 +13,7 @@
     {% for department in departments %}
       <tr>
         <th scope="row">{{ department['id'] }}</th>
-        <td>
-          <a href="#">{{ department['title'] }}</a>  </td>
+        <td><a href="{{url_for('view_departments.department_item', id_dept = department.id)}}">{{ department['title'] }}</a> </td>
         <td>{{ department['average salary'] }}</td>
         <td>{{ department['employees']|length }}</td>
       </tr>

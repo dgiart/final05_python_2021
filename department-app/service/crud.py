@@ -48,7 +48,7 @@ def get_department(id_dept):
     if department:
         average_salary = get_average_salary(id_dept)
         to_return = {'id': department.id_dept, 'title': department.title, 'average salary': average_salary,
-                     'employees': [{'id': employee.id_empl, 'name': employee.name} for employee in
+                     'employees': [{'id': employee.id_empl, 'name': employee.name, 'salary': employee.salary, 'birthday': employee.birthday} for employee in
                                    department.employees]}
         return to_return
     else:
@@ -134,7 +134,7 @@ def get_employees(*args):
             employees = Employee.query.all()
     # employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date ]
     to_return = [
-        {'ID': employee.id_empl, 'Name': employee.name, 'salary': employee.salary, 'birthday': employee.birthday,
+        {'id': employee.id_empl, 'name': employee.name, 'salary': employee.salary, 'birthday': employee.birthday,
          'department': employee.id_empl_dept} for
         employee in employees]
     return to_return

@@ -1,26 +1,33 @@
 {% extends 'base.html' %}
+
 {% block content %}
-  <table class="table">
+<table>
+    <tr>
+        <td><h2>id: {{ department['id'] }},  </h2></td><td><h2>Title: {{ department['title'] }},  </h2></td><td><h2>Number of Employees: {{ department['employees']|length }}.</h2></td>
+    </tr>
+</table>
+<p></p>
+<h3> List of Employees </h3>
+<table class="table">
     <thead>
       <tr>
         <th scope="col">id</th>
-        <th scope="col">Name</th>
+        <th scope="col">name</th>
         <th scope="col">Salary</th>
         <th scope="col">Birthday</th>
-        <th scope="col">Department</th>
       </tr>
     </thead>
     <tbody>
-    {% for employee in employees %}
+    {% for employee in department['employees'] %}
       <tr>
         <th scope="row">{{ employee['id'] }}</th>
         <td>
           <a href="{{url_for('view_employees.employee_item', id_empl = employee.id)}}">{{ employee['name'] }}</a>  </td>
         <td>{{ employee['salary'] }}</td>
-        <td>{{ employee['birthday']}}</td>
-        <td>{{ employee['department']}}</td>
+        <td>{{ employee['birthday'] }}</td>
       </tr>
       {% endfor %}
     </tbody>
   </table>
+
 {% endblock %}

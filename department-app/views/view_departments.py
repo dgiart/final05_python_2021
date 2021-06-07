@@ -14,4 +14,6 @@ def departments_list():
 @view_departments_blueprint.route('/<int:id_dept>', methods=['GET', 'POST'])
 def department_item(id_dept):
     department = get_department(id_dept)
+    return render_template('department.html', department=department)
+
 
