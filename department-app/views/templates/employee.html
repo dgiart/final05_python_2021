@@ -7,5 +7,6 @@
         <td><h2>Birthday: {{ employee['birthday'] }},</h2></td> <td><h2>Department: {{ employee['department'] }} .</h2></td>
     </tr>
 </table>
+<a href="{{ url_for('view_employees.delete_employee', id_empl =employee.id) }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">DELETE</a>
 
 {% endblock %}
