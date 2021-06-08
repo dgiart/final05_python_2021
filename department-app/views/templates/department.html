@@ -6,6 +6,7 @@
         <td><h2>id: {{ department['id'] }},  </h2></td><td><h2>Title: {{ department['title'] }},  </h2></td><td><h2>Number of Employees: {{ department['employees']|length }}.</h2></td>
     </tr>
 </table>
+{% if department['employees']|length>0 %}
 <p></p>
 <h3> List of Employees </h3>
 <table class="table">
@@ -29,5 +30,6 @@
       {% endfor %}
     </tbody>
   </table>
-
+{% endif %}
+<a href="{{ url_for('view_departments.delete_department', id_dept =department.id) }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">DELETE</a>
 {% endblock %}
