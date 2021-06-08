@@ -71,7 +71,7 @@ def del_department(dept_id):
 
 
 def put_department(id_dept, title):
-    department = Department.query.filter(Department.id_dept == id_dept).first()
+    department = Department.query.filter_by(id_dept=id_dept).first()
     department.title = title
     db.session.commit()
     return id_dept
@@ -134,7 +134,7 @@ def get_employees(*args):
             end_date = datetime(and_year, end_month, end_day)
             employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date]
         except TypeError as te:
-            # print(te)
+            print(te)
             employees = Employee.query.all()
     # employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date ]
     to_return = [

@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from flask_restful import Resource, Api
 from service.crud import add_department, get_departments, get_department, del_department, put_department
-from rest.checkers import department_check
+from service.checkers import department_check
 from models.models import department_keys
 rest_departments_blueprint = Blueprint('departments', __name__)
 dept_api = Api(rest_departments_blueprint)

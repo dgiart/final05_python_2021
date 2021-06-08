@@ -81,16 +81,18 @@ def get_average_salary(id_dept):
 def foo(*args):
     return(args)
 if __name__ == '__main__':
-    int(None)
-    t = '1', '2', '3'
-    print(foo())
-    a, b, c = t
-    m = map(lambda x: int(x), t)
-    z = zip(t, m)
-    print(dict(z))
+    date_ = date('1979 - 04 - 25')
+    print(date_)
+    # int(None)
+    # t = '1', '2', '3'
+    # print(foo())
+    # a, b, c = t
+    # m = map(lambda x: int(x), t)
+    # z = zip(t, m)
+    # print(dict(z))
     # x = int(None)
     # try:
-    #     date_ = date(20, 12)
+    #     date_ = date(1979-04-25)
     # except TypeError as te:
     #     date_ = date(1, 1, 1)
     # print(date_)
@@ -118,7 +120,8 @@ if __name__ == '__main__':
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    # d1 = Department.query.filter_by(id_dept=1).first()
+    d1 = Department.query.filter_by(id_dept=10).first()
+    print(d1)
     # d1.title = 'study'
     # db.session.add(e2)
     # db.session.add(d1)

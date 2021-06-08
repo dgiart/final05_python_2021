@@ -1,4 +1,4 @@
-from wtforms import StringField, SubmitField, IntegerField, FloatField
+from wtforms import StringField, SubmitField, IntegerField, FloatField, DateField
 from wtforms.validators import DataRequired
 from flask_wtf import FlaskForm
 
@@ -15,4 +15,15 @@ class EmployeeForm(FlaskForm):
     year = IntegerField('Year', validators=[DataRequired()])
     month = IntegerField('Month', validators=[DataRequired()])
     day = IntegerField('Day', validators=[DataRequired()])
+    submit = SubmitField('Submit')
+
+
+class BirthDateForm(FlaskForm):
+    start_date = DateField('start date', format='%Y-%m-%d')
+    end_date = DateField('end date', format='%Y-%m-%d')
+    submit = SubmitField('Submit')
+
+
+class DateTest(FlaskForm):
+    date = DateField('date', format='%Y-%m-%d')
     submit = SubmitField('Submit')
