@@ -7,6 +7,7 @@ from flask_restful import Api
 app = Flask(__name__)
 # Connects our Flask App to our Database
 
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://art:artem@localhost/db_to_test'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://art:artem@localhost/departments'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
