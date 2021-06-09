@@ -18,9 +18,14 @@ class EmployeeForm(FlaskForm):
     submit = SubmitField('Submit')
 
 
+class BirthDateIntervalForm(FlaskForm):
+    start_date = DateField('Start date', format='%Y-%m-%d')
+    end_date = DateField('End date', format='%Y-%m-%d')
+    submit = SubmitField('Submit')
+
+
 class BirthDateForm(FlaskForm):
-    start_date = DateField('start date', format='%Y-%m-%d')
-    end_date = DateField('end date', format='%Y-%m-%d')
+    birthday = DateField('Birthday', format='%Y-%m-%d')
     submit = SubmitField('Submit')
 
 

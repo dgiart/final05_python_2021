@@ -39,7 +39,6 @@ class DepartmentItem(Resource):
         """
         department = get_department(id_dept)
         if department:
-            print(f"get department: {id_dept}")
             resp = jsonify(department)
             resp.status_code = 200
             return resp

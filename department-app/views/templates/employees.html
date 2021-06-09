@@ -1,15 +1,36 @@
 {% extends 'base.html' %}
 {% block content %}
 <h2> List of Employees</h2>
-<form  method="POST">
-        {{ form.hidden_tag() }}
-        <br>
-        {{ form.start_date.label }} {{form.start_date}}
-        <br>
-        {{ form.end_date.label }} {{ form.end_date }}
-        <br>
-        {{ form.submit() }}
-    </form>
+<table>
+    <tr>
+        <td>
+            Enter interval birthday to search in format: Y-M-D.
+            <form  method="POST">
+                {{ form2.hidden_tag() }}
+                <br>
+                {{ form2.start_date.label }} {{form2.start_date}}
+                <br>
+
+                {{ form2.end_date.label }} {{ form2.end_date }}
+                <br>
+                {{ form2.submit() }}
+            </form>
+
+        </td>
+        <td>
+            Enter exact birthday to search in format: Y-M-D.
+            <form  method="POST">
+                {{ form1.hidden_tag() }}
+                               <br>
+                {{ form1.birthday.label }} {{form1.birthday}}
+                <br>
+
+                {{ form1.submit() }}
+            </form>
+        </td>
+    </tr>
+</table>
+
 <br>
   <table class="table">
     <thead>

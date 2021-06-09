@@ -16,5 +16,5 @@ import models.models
 Migrate(app, db)
 api = Api(app)
 # dept_api = Api(departments_blueprint)
-db.create_all()
+# db.create_all()
 print(f'IMPORT db={db} and app={app}')
