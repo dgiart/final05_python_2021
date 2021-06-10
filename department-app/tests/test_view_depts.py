@@ -69,7 +69,7 @@ def test_rest(client):
     assert 'Enter a Title' in str(rv.data)
 
     # tu_put = {'title': 'research'}
-    rv = client.get('/view/departments/delete/5')
+    rv = client.get('/view/departments/delete/15')
     assert rv.status_code == 302
     assert 'text/html' in rv.content_type
     assert 'You should be redirected' in str(rv.data)
