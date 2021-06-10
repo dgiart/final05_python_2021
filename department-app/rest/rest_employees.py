@@ -10,19 +10,13 @@ empl_api = Api(rest_employees_blueprint)
 
 class Employees(Resource):
     def post(self):
-        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         data = request.json
-        print(data)
         if not data:
             return 'Bad Request', 400
         try:
             birthday = employee_check(data, employee_keys)
         except TypeError as e:
-            print(f'TypeError in post: {e}')
             return 'Bad Request', 400
-        # if not birthday:
-        #     return 'Bad Request', 400
-        #jjjjj
         name = data.get('name')
         salary = data.get('salary')
         id_empl_dept = data.get('id_empl_dept')
@@ -34,7 +28,6 @@ class Employees(Resource):
         return resp
 
     def get(self):
-        print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
         if not request.args:
             employees = get_employees()
         else:
@@ -46,7 +39,6 @@ class Employees(Resource):
             end_year = request.args.get('end_year')
             dates = start_year, start_month, start_day, end_year, end_month, end_day
             employees = get_employees(dates)
-        # employees = get_employees(start_day, end_day, start_month, end_month, start_year, end_year)
         resp = jsonify(employees)
         resp.status_code = 200
         return resp
@@ -80,7 +72,13 @@ class EmployeeItem(Resource):
             return resp
 
     def put(self, id_empl):
+        """
+        Method changes an employee with id
+        :param id_empl: employee id
+        :return: new employee
+        """
         data = request.json
+        print(f'data: {data}')
         birthday = employee_check(data, employee_keys)
         print(f'birthday: {birthday}')
         if not birthday:
@@ -92,7 +90,6 @@ class EmployeeItem(Resource):
         employee = {'id': item_id, 'name': name}
         resp = jsonify(employee)
         resp.status_code = 201
-        # resp = None
         return resp
 
 

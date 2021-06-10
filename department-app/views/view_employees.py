@@ -1,8 +1,9 @@
 from flask import Blueprint, render_template, url_for, redirect
 from service.crud import add_employee, get_employees, get_employee, del_employee, put_employee
 from datetime import date
-from . forms import EmployeeForm, BirthDateIntervalForm, BirthDateForm
+from .forms import EmployeeForm, BirthDateIntervalForm, BirthDateForm
 from service.checkers import is_in_department
+
 view_employees_blueprint = Blueprint('view_employees', __name__, template_folder='templates')
 
 
@@ -33,19 +34,14 @@ def employee_item(id_empl):
 @view_employees_blueprint.route('/create', methods=['GET', 'POST'])
 def create_employee():
     form = EmployeeForm()
-    print(f'form name = {form.name.data}')
-    print(form.validate_on_submit())
     if form.validate_on_submit():
-        print('in')
         name = form.name.data
         salary = form.salary.data
         department = form.department.data
-        print(department)
         if not is_in_department(department):
             item = 'department'
             return render_template('not_existed.html', item=item)
         birthday = date(form.year.data, form.month.data, form.day.data)
-        # add_employee(name, salary, birthday, department)
         id_empl = add_employee(name, salary, birthday, department)
         return redirect(url_for('view_employees.employee_item', id_empl=id_empl))
     return render_template('employee_create.html', form=form)
@@ -61,4 +57,19 @@ def delete_employee(id_empl):
         return render_template('not_existed.html', item=item)
 
 
+@view_employees_blueprint.route('/edit/<int:id_empl>', methods=['GET', 'POST'])
+def edit_employee(id_empl):
+    form = EmployeeForm()
+    employee = get_employee(id_empl)
+    if form.validate_on_submit():
+        name = form.name.data
+        salary = form.salary.data
+        department = form.department.data
+        if not is_in_department(department):
+            item = 'department'
+            return render_template('not_existed.html', item=item)
+        birthday = date(form.year.data, form.month.data, form.day.data)
+        put_employee(id_empl, name, salary, birthday, department)
+        return redirect(url_for('view_employees.employee_item', id_empl=id_empl))
+    return render_template('employee_edit.html', form=form, employee=employee)
 

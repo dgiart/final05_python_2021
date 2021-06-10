@@ -28,8 +28,8 @@ deps = Department.query.all()
 empls = Employee.query.all()
 print(len(deps))
 print('***********************')
-# for empl in empls:
-#     print(empl)
+for empl in empls:
+    print(empl)
 for dept in deps:
     print(dept)
 # to_post = {'title': 'test'}

@@ -9,5 +9,5 @@
 </table>
 <br>
 <a href="{{ url_for('view_employees.delete_employee', id_empl =employee.id) }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">DELETE</a>
-
+<a href="{{ url_for('view_employees.edit_employee', id_empl =employee.id) }}" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">EDIT</a>
 {% endblock %}

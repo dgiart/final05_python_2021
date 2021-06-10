@@ -53,7 +53,7 @@ def test_rest(client):
     assert 'text/html' in rv.content_type
     assert 'does not exist' in str(rv.data)
 
-    rv = client.get('/view/departments/delete/44')
+    rv = client.get('/view/departments/delete/47')
     assert rv.status_code == 302
     assert 'text/html' in rv.content_type
     assert 'You should be redirected' in str(rv.data)
@@ -68,11 +68,11 @@ def test_rest(client):
     assert 'text/html' in rv.content_type
     assert 'Enter a Title' in str(rv.data)
 
-    tu_put = {'title': 'research'}
-    rv = client.post('/view/departments/edit/1', json=tu_put)
-    assert rv.status_code == 200
+    # tu_put = {'title': 'research'}
+    rv = client.get('/view/departments/delete/5')
+    assert rv.status_code == 302
     assert 'text/html' in rv.content_type
-    assert 'Enter a Title' in str(rv.data)
+    assert 'You should be redirected' in str(rv.data)
 
 
 

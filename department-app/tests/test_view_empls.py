@@ -46,6 +46,29 @@ def test_rest(client):
     assert rv.status_code == 405
     assert 'text/html' in rv.content_type
 
+    rv = client.get('/view/employees/edit/2')
+    assert rv.status_code == 200
+    assert 'text/html' in rv.content_type
+    assert 'Edit Employee #' in str(rv.data)
+
+    rv = client.post('/view/employees/edit/2')
+    assert rv.status_code == 200
+    assert 'text/html' in rv.content_type
+    assert 'Edit Employee #' in str(rv.data)
+
+    rv = client.get('/view/employees/delete/202')
+    assert rv.status_code == 200
+    assert 'text/html' in rv.content_type
+    assert 'does not exist' in str(rv.data)
+
+    rv = client.get('/view/employees/delete/47')
+    assert rv.status_code == 302
+    assert 'text/html' in rv.content_type
+    assert 'You should be redirected' in str(rv.data)
+    # Department  #
+
+
+
     print('*****************************************************************************\n\n')
     print(f'status: {rv.status}')
     print(f'status_code: {rv.status_code}')
