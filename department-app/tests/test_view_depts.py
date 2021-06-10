@@ -53,7 +53,7 @@ def test_rest(client):
     assert 'text/html' in rv.content_type
     assert 'does not exist' in str(rv.data)
 
-    rv = client.get('/view/departments/delete/47')
+    rv = client.get('/view/departments/delete/11')
     assert rv.status_code == 302
     assert 'text/html' in rv.content_type
     assert 'You should be redirected' in str(rv.data)
