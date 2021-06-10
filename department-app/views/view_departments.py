@@ -6,13 +6,13 @@ from .forms import DepartmentForm
 view_departments_blueprint = Blueprint('view_departments', __name__, template_folder='templates')
 
 
-@view_departments_blueprint.route('/', methods=['GET', 'POST'])
+@view_departments_blueprint.route('/')
 def departments_list():
     departments = get_departments()
     return render_template('departments.html', departments=departments)
 
 
-@view_departments_blueprint.route('/<int:id_dept>', methods=['GET', 'POST'])
+@view_departments_blueprint.route('/<int:id_dept>')
 def department_item(id_dept):
     department = get_department(id_dept)
     return render_template('department.html', department=department)
@@ -36,3 +36,19 @@ def delete_department(id_dept):
     else:
         item = 'employee'
         return render_template('not_existed.html', item=item)
+
+
+@view_departments_blueprint.route('/edit/<int:id_dept>', methods=["GET", "POST"])
+def edit_department(id_dept):
+    form = DepartmentForm()
+    department = get_department(id_dept)
+    print(form.validate_on_submit())
+    if form.validate_on_submit():
+        title = form.title.data
+        put_department(id_dept, title)
+        return redirect(url_for('view_departments.department_item', id_dept=id_dept))
+    return render_template('department_edit.html', form=form, department=department)
+
+
+
+# put_department
