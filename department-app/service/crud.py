@@ -80,11 +80,8 @@ def put_department(id_dept, title):
 def get_average_salary(id_dept):
     department = Department.query.filter_by(id_dept=id_dept).first()
     employees = department.employees
-    # print(f'employees: {employees}')
-    # print(f'len(employees)={len(employees)}')
     salary = 0
     for employee in employees:
-        print(f'employee.salary: {employee.salary}')
         salary += employee.salary
     average = 0 if len(employees) == 0 else (salary / len(employees)).__round__(2)
     return average

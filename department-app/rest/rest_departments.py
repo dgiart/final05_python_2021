@@ -24,6 +24,10 @@ class Departments(Resource):
         return resp
 
     def get(self):
+        """
+        Returns list of departments
+        :return: list of departments
+        """
         departments = get_departments()
         resp = jsonify(departments)
         resp.status_code = 200
@@ -39,7 +43,6 @@ class DepartmentItem(Resource):
         """
         department = get_department(id_dept)
         if department:
-            print(f"get department: {id_dept}")
             resp = jsonify(department)
             resp.status_code = 200
             return resp
@@ -63,15 +66,19 @@ class DepartmentItem(Resource):
             return resp
 
     def put(self, id_dept):
+        """
+        Method changes department
+        :param id_dept: id of department
+        :return: changed department
+        """
         data = request.get_json()
         if not department_check(data, department_keys):
             return 'Bad Request', 400
         title = data.get('title')
         item_id = put_department(id_dept, title)
-        employee = {'id': item_id, 'title': title}
-        resp = jsonify(employee)
-        resp.status_code = 201
-        # resp = None
+        department = {'id': item_id, 'title': title}
+        resp = jsonify(department)
+        resp.status_code = 200
         return resp
 
 

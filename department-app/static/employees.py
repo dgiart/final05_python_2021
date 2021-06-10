@@ -6,4 +6,4 @@ employees = []
 for empl in employees_dict:
     employees.append(empl['commonName'])
 
-# print(employees)
+print(employees)
