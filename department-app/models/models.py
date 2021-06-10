@@ -1,15 +1,35 @@
-import random
+import setup
+from datetime import datetime
+
+db = setup.db
+
+department_keys = ['title']
+employee_keys = ['name', 'salary', 'birthday', 'id_empl_dept']
 
 
-class Departments:
-    __id = 0
-    dept_args = ['id', 'name', 'num']
+class Department(db.Model):
+    id_dept = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    title = db.Column(db.String(140))
+    employees = db.relationship('Employee', backref='employee_department')
 
-    def __init__(self, name='None', num=0):
-        self.name = name
-        self.num = num
-        Departments.__id += 1
-        self.id = Departments.__id
+
+    def __init__ (self, *args, **kwargs):
+        super(Department, self). __init__(*args, **kwargs)
 
     def __repr__(self):
-        return f'id: {self.id}; name: {self.name}; employees: {self.num}'
+        return f'Department: id={self.id_dept}, title: {self.title})'#, employees={self.employees}'
+
+
+class Employee(db.Model):
+    id_empl = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(140))
+    salary = db.Column(db.Float)
+    birthday = db.Column(db.DateTime)
+    id_empl_dept = db.Column(db.Integer, db.ForeignKey('department.id_dept'))
+
+    def __init__ (self, *args, **kwargs):
+        super(Employee, self). __init__(*args, **kwargs)
+
+    def __repr__(self):
+        return f'Employee: id: {self.id_empl}, name: {self.name}, birthday: {self.birthday}, department: {self.id_empl_dept}'
+

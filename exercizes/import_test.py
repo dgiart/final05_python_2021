@@ -1,11 +1,11 @@
-from module_test import p
-from module_test import A
-from module_test import foo
-import module_test
+from modules.module_test import A
+import sys
+
+def main():
+    aa = A()
+    aa.a()
+    for el in sys.path:
+        print(el)
 
 if __name__ == '__main__':
-    print(f'pi = {p}')
-    a = A()
-    a.a()
-    from module_test import A
-    foo()
+    main()

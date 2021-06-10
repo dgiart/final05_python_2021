@@ -1,0 +1,1000 @@
+   16  conda deactivate
+   17  cd flask2020/flask2020/
+   18  git status
+   19  fask2020venv
+   20  nano .bashrc
+   21  cd ~/
+   22  nano .bashrc
+   23  cd flask2020/flask2020/
+   24  fask2020env
+   25  flask2020env
+   26  ls
+   27  atom .
+   28  ls
+   29  cd app
+   30  python
+   31  cd ..
+   32  git status
+   33  git add *
+   34  git commit - m "Finished Video 7 (16.43, 01:02:2021) Added connection between Tags and Posts, just one tag."
+   35  git branch
+   36  git pull origin dbcreate
+   37  git push origin
+   38  git push origin dbcreate
+   39  git status
+   40  git add *
+   41  git status
+   42  git commit - m "Finished Video 7 (16.43, 01:02:2021) Added connection between Tags and Posts, just one tag."
+   43  git commit -m "Finished Video 7 (16.43, 01:02:2021) Added connection between Tags and Posts, just one tag."
+   44  git status
+   45  git pull origin dbcreate
+   46  git push origin dbcreate
+   47  pip freeze
+   48  jup
+   49  jup
+   50  conda deactivate
+   51  mysql -u root -p
+   52  nano .bashrc
+   53  flask2020env
+   54  source .bashrc
+   55  conda deactivate
+   56  flask2020env
+   57  source .bashrc
+   58  nano .bashrc
+   59  source .bashrc
+   60  flask2020env
+   61  cd flask2020
+   62  ls
+   63  cd flask2020
+   64  ls
+   65  cd app
+   66  python
+   67  clear
+   68  python
+   69  pip freeze
+   70  git status
+   71  git add *
+   72  git commit -m "05.02.2021"
+   73  git branch
+   74  git pull origin dbcreate
+   75  git push origin dbcreate
+   76  nano .bashrc
+   77  flask2020env
+   78  cd flask2020
+   79  ls
+   80  atom .
+   81  pip install wtforms
+   82  pip freeze
+   83  python
+   84  ls
+   85  ls app
+   86  python
+   87  clear
+   88  python
+   89  git status
+   90  git add *
+   91  git status
+   92  git commit -m "20.44 , 08/02/21 works with forms, create_post ...."
+   93  git branch
+   94  git pull origin dbcreate
+   95  git push origin dbcreate
+   96  clear
+   97  git config
+   98  git config --list
+   99  git config --global
+  100  nano .bashrc
+  101  flask2020env
+  102  cd flask2020/flask2020
+  103  ls
+  104  cd app
+  105  ls
+  106  python
+  107  app .
+  108  atom .
+  109  killall python
+  110  killall python3
+  111  mysql -u root -p
+  112  pwd
+  113  cwd
+  114  cd flask2020
+  115  pwd
+  116  cd ../My_Projects
+  117  ls
+  118  mkdir pack_test && cd pack_test
+  119  pwd
+  120  python
+  121  mkdir pack1, pack2
+  122  ls
+  123  touch pack1/p1mod1, pack1/p1mod2
+  124  touch /pack1/p1mod1.py, /pack1/p1mod2.py
+  125  cd pack1
+  126  ls
+  127  cd pack1
+  128  ls
+  129  python
+  130  cd pack1
+  131  touch p1mod1.py p1mod2.py
+  132  ls
+  133  atom .
+  134  cd ../pack2
+  135  cd ..
+  136  atom .
+  137  nano .bashrc
+  138  source .bashrc
+  139  flask2020
+  140  nano .bashrc
+  141  cd ../..
+  142  nano .bashrc
+  143  source .bashrc
+  144  flask2020
+  145  killall python
+  146  killall python3
+  147  ls
+  148  . atom
+  149  .atom
+  150  ls
+  151  atom .
+  152  git status
+  153  add *
+  154  git add *
+  155  git status
+  156  git commit -m "10.02.2021, pagination done, Necessary to fix problem with bootstrap versions."
+  157  git pull origin dbcreate
+  158  git push origin dbcreate
+  159  flask2020
+  160  pip install flask-admin
+  161  pip freeze
+  162  pip -V
+  163  pip install --upgrade pip
+  164  pip -V
+  165  git status
+  166  git add *
+  167  git commit -m "12.02.21 edit button added"
+  168  git branch
+  169  git pull origin dbcreate
+  170  git pudh origin dbcreate
+  171  git push origin dbcreate
+  172  jup
+  173  flask2020
+  174  python
+  175  ls
+  176  cd app
+  177  pyrhon
+  178  python
+  179  pip install flask-admin
+  180  pip freeze
+  181  pip install flask-sequrity
+  182  pip install flask-security
+  183  pip freeze
+  184  conda deactivate
+  185  source venv/bin/activate
+  186  pip freeze
+  187  python
+  188  python3
+  189  pip -V
+  190  python
+  191  python part1.py
+  192  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py
+  193  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2 5
+  194  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2 5 da
+  195  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2 5 da 4 as
+  196  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1+2
+  197  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2 3
+  198  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2 + 3
+  199  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 ~ 2 + 3
+  200  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 ~ 2 ++ 3
+  201  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 += 2 ++ 3
+  202  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 2 + 3
+  203  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2 3
+  204  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 2 + 3
+  205  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 2
+  206  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 - 2
+  207  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 -+ 2
+  208  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 *+ 2
+  209  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 -+ 2
+  210  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 2
+  211  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 2
+  212  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1  2
+  213  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 2
+  214  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 5
+  215  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 5 - 2
+  216  a = 5
+  217  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 5 - 2
+  218  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 5 - 2 + 10
+  219  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 5
+  220  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 - 5
+  221  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 + 5
+  222  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 - 5
+  223  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 1 - 5 + 1
+  224  10 - 5
+  225  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 10 - 5
+  226  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 - 10
+  227  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 + 10
+  228  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 - 10
+  229  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 * 10
+  230  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 + 10
+  231  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 - 10
+  232  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 * 10
+  233  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 k 10
+  234  /usr/local/bin/python3.8 /home/art/programming/python/epam2021/HW/part1.py 5 * 10
+  235  python
+  236  python part1.py
+  237  python part1.py 1 2 3
+  238  python part1.py 1 
+  239  python part1.py 1 2 3
+  240  python part1.py 1 2 
+  241  python part1.py 1 2 4
+  242  python part1.py 1 2 4 j
+  243  python part1.py 
+  244  python 
+  245  *
+  246  sss
+  247  *
+  248  conda deactivate
+  249  jup
+  250  flask2021
+  251  flask2020
+  252  cd ~
+  253  cd flask2020
+  254  ls
+  255  atom .
+  256  pip freeze
+  257  pip install email_validator
+  258  ls
+  259  cd app
+  260  ls
+  261  python manage.py db migrate
+  262  python manage.py db upgrade
+  263  ls
+  264  from app import db
+  265  from app import user_datastore
+  266  python
+  267  python
+  268  killall python3
+  269  pip install bcrypt
+  270  killall python3
+  271  python
+  272  killall python3
+  273  jup
+  274  python
+  275  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_2_exercise_1.git
+  276  conda install scipy
+  277  git config --global user.name 'ULXOcMYh' 
+  278  git config --global user.email babichart@gmail.com
+  279  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_1_exercise_2.git
+  280  ls
+  281  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_1_exercise_2.git
+  282  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_1_exercise_1.git
+  283  atom .
+  284  ls
+  285  cd ulxocmyh-python_online_task_1_exercise_2
+  286  ls
+  287  nano task_1_ex_2.py
+  288  git add task_1_ex_2.py
+  289  git commit -m "first 13.13 03/03/21"
+  290  git push origin master
+  291  ls
+  292  python task_1_ex_2.py add 1 2
+  293  python task_1_ex_2.py exp 1 2
+  294  sin 2 9
+  295  python task_1_ex_2.py sin 1 2
+  296  python task_1_ex_2.py hbgn 1 2
+  297  echo $?
+  298  git add task_1_ex_2.py
+  299  git commit -m "second 13.30 03/03/21"
+  300  git push origin master
+  301  python task_1_ex_2.py sin 1 2
+  302  python task_1_ex_2.py add 1 2
+  303  exp
+  304  python task_1_ex_2.py exp 1 2
+  305  python task_1_ex_2.py pow 2 3
+  306  git add task_1_ex_2.py
+  307  git commit -m "3-d 13.40 03/03/21"
+  308  git push origin master
+  309  python task_1_ex_2.py pow 2 3
+  310  python task_1_ex_2.py exp 2 3
+  311  git commit -m "4 13.50 03/03/21"
+  312  python task_1_ex_2.py pow 2 3
+  313  git add task_1_ex_2.py
+  314  git commit -m "4 13.50 03/03/21"
+  315  git push origin master
+  316  python task_1_ex_2.py pow 2 3
+  317  git add task_1_ex_2.py
+  318  git commit -m "5 14.39 03/03/21"
+  319  git push origin master
+  320  python task_1_ex_2.py cosh 2 
+  321  git add task_1_ex_2.py
+  322  git commit -m "6 14.46 03/03/21"
+  323  git push origin master
+  324  python task_1_ex_2.py cosh 2
+  325  git add task_1_ex_2.py
+  326  git commit -m "7 15.09 03/03/21"
+  327  git push origin master
+  328  python 
+  329  jup
+  330  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_1_exercise_3.git
+  331  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_3_exercise_1.git
+  332  ls
+  333  cd ulxocmyh-python_online_task_3_exercise_1
+  334  git status
+  335  git add ulxocmyh-python_online_task_3_exercise_1
+  336  git add task_3_ex_1.py
+  337  git commit -m "first 18.20 05/03/21"
+  338  git push origin master
+  339  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_3_exercise_1.git
+  340  ls
+  341  cd ulxocmyh-python_online_task_3_exercise_1
+  342  ls
+  343  nano task_3_ex_1.py
+  344  atom .
+  345  nano task_3_ex_1.py
+  346  git add task_3_ex_1.py
+  347  git commit -m "first 18.20 05/03/21"
+  348  git push origin master
+  349  cd ..
+  350  ls
+  351  git add task_2_ex_1.py
+  352  git commit -m "first 14.44 05/03/21"
+  353  git push origin master
+  354  python task_2_ex_1.py -W 5 -w 2 3 4 -n 5
+  355  python task_2_ex_1.py -W 5 -w 2 3 4 -n 3
+  356  git add task_2_ex_1.py
+  357  git commit -m "second 15.08 05/03/21"
+  358  git push origin master
+  359  git add task_2_ex_1.py
+  360  git commit -m "Third 15.25 05/03/21"
+  361  git push origin master
+  362  clear
+  363  git add task_2_ex_1.py
+  364  git commit -m "4-th 15.40 05/03/21"
+  365  git push origin master
+  366  atom .
+  367  ls
+  368  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_7.git
+  369  ls
+  370  atom .
+  371  ls
+  372  cd ulxocmyh-python_online_task_4_exercise_7
+  373  git status
+  374  git add task_4_ex_7.py
+  375  git commit -m "first, 17.11, 11/03/21"
+  376  git push origin master
+  377  cd ..
+  378  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_9.git
+  379  git status
+  380  ls
+  381  cd ulxocmyh-python_online_task_4_exercise_9
+  382  git status
+  383  git add task_4_ex_9.py
+  384  git commit -m "first, 18.09, 11/03/21"
+  385  git push origin master
+  386  git status
+  387  git add task_4_ex_9.py
+  388  git commit -m "second, 18.29, 11/03/21"
+  389  git push origin master
+  390  clear
+  391  git status
+  392  git add task_4_ex_9.py
+  393  git commit -m "third, 19.48, 11/03/21"
+  394  git push origin master
+  395  find -name testtest
+  396  atom .
+  397  ls
+  398  cd ulxocmyh-python_online_task_4_exercise_9
+  399  git status
+  400  git pull ogigin master
+  401  git pull origin master
+  402  cd ..
+  403  ls
+  404  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_10.git
+  405  ls
+  406  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_2.git
+  407  ls
+  408  clear
+  409  ls
+  410  cd ulxocmyh-python_online_task_4_exercise_2
+  411  git status
+  412  git addtask_4_ex_2.py
+  413  git add task_4_ex_2.py
+  414  git commit -m "first, 16.30, 12/03/21"
+  415  git pudh origin master
+  416  git push origin master
+  417  git add task_4_ex_2.py
+  418  git commit -m "second, 16.30, 12/03/21"
+  419  git push origin master
+  420  git add task_4_ex_2.py
+  421  git commit -m "third, 17.06, 12/03/21"
+  422  git push origin master
+  423  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_1.git
+  424  ls
+  425  atom .
+  426  ls
+  427  cd ulxocmyh-python_online_task_4_exercise_1
+  428  ls
+  429  git status
+  430  git add task_4_ex_1.py
+  431  git commit -m "first, 16.38 16/03/21"
+  432  git push origin master
+  433  ls
+  434  nano task_4_ex_1.py
+  435  git pull origin master
+  436  git push origin master
+  437  cd ..
+  438  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_3.git
+  439  ls
+  440  cd ulxocmyh-python_online_task_4_exercise_3
+  441  ls
+  442  clear
+  443  ls
+  444  git status
+  445  nano task_4_ex_3.py
+  446  git add task_4_ex_3.py
+  447  git commit -m "first 17.03 16/03/21"
+  448  git push origin master
+  449  cd ..
+  450  ls
+  451  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_8.git
+  452  ls
+  453  cd ulxocmyh-python_online_task_4_exercise_8
+  454  git status
+  455  git add task_4_ex_8.py
+  456  git commit -m "first, 17.26 16/03/21"
+  457  git push origin master
+  458  git status
+  459  git add task_4_ex_8.py
+  460  git commit -m "second, 17.38, 16/03/21"
+  461  git push origin master
+  462  cd ..
+  463  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_5.git
+  464  ls
+  465  cd ulxocmyh-python_online_task_4_exercise_5
+  466  ls
+  467  nano task_4_ex_5.py
+  468  git status
+  469  git add task_4_ex_5.py
+  470  git commit -m "first, 19.19, 16/03/21"
+  471  git push origin master
+  472  git status
+  473  git add task_4_ex_5.py
+  474  git commit -m "second, 19.29, 16/03/21"
+  475  git push origin master
+  476  clear
+  477  git status
+  478  git add task_4_ex_5.py
+  479  git commit -m "third, 19.40, 16/03/21"
+  480  git push origin master
+  481  cd ..
+  482  ls
+  483  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_4.git
+  484  ls
+  485  cd ulxocmyh-python_online_task_4_exercise_4
+  486  git status
+  487  git add task_4_ex_4.py
+  488  git commit -m "first, 20.44, 17/03/21"
+  489  git push origin master
+  490  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_6.git
+  491  ls
+  492  cd ulxocmyh-python_online_task_4_exercise_6
+  493  ls
+  494  nano task_4_ex_6.py
+  495  git status
+  496  git add task_4_ex_6.py
+  497  git commit -m "first, 18.51, 17/03/2021"
+  498  git push origin master
+  499  cd ../..
+  500  ls
+  501  cd hw5
+  502  ls
+  503  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_5_exercise_2.git
+  504  ls
+  505  clear
+  506  ls
+  507  cd ulxocmyh-python_online_task_5_exercise_2
+  508  git status
+  509  git add task_5_ex_2.py
+  510  git commit -m "first 19.42, 17/03/21"
+  511  git push origin master
+  512  cd ..
+  513  ls
+  514  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_5_exercise_3.git
+  515  ls
+  516  cd ulxocmyh-python_online_task_5_exercise_3
+  517  git status
+  518  clear
+  519  ls
+  520  git add task_5_ex_3.py
+  521  git commit -m "first, 20.02, 17/03/21"
+  522  git pish origin master
+  523  git push origin master
+  524  cd ..
+  525  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_5_exercise_1.git
+  526  ls
+  527  cd ulxocmyh-python_online_task_5_exercise_1
+  528  git status
+  529  git add task_5_ex_1.py
+  530  git commit -m "first, 20.52, 17/03/21"
+  531  git push origin master
+  532  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_7_exercise_1.git
+  533  ls
+  534  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_7_exercise_2.git
+  535  ls
+  536  git status
+  537  ls 
+  538  cd ulxocmyh-python_online_task_7_exercise_2
+  539  git status
+  540  git add task_7_ex_2.py
+  541  git commit -m "first, 18.10, 24/03/21"
+  542  git push origin master
+  543  clear
+  544  git status
+  545  git add task_7_ex_2.py
+  546  git commit -m "second, 18.17, 24/03/21"
+  547  git push origin master
+  548  git status
+  549  git add task_7_ex_2.py
+  550  git commit -m "Third, 19.10, 24/03/21"
+  551  git push origin master
+  552  git status
+  553  git add task_7_ex_2.py
+  554  git commit -m "4, 19.18, 24/03/21"
+  555  git push origin master
+  556  clear
+  557  git status
+  558  git add task_7_ex_2.py
+  559  git commit -m "4, 19.18, 24/03/21"
+  560  git push origin master
+  561  cd ..
+  562  ls
+  563  cd hw7test
+  564  ls
+  565  atom .
+  566  ls
+  567  cd ulxocmyh-python_online_task_4_exercise_3
+  568  git status
+  569  git add task_4_ex_3.py
+  570  git commit -m "second, 18.38, 17/03/2021"
+  571  git push origin master
+  572  git status
+  573  git add task_4_ex_3.py
+  574  git commit -m "third, 18.57, 17/03/2021"
+  575  git push origin master
+  576  clear
+  577  git status
+  578  git add task_4_ex_3.py
+  579  git commit -m "4, 19.11, 17/03/2021"
+  580  git push origin master
+  581  git status
+  582  git add task_4_ex_3.py
+  583  git commit -m "5, 19.19, 17/03/2021"
+  584  git push origin master
+  585  cd ../..
+  586  atom .
+  587  ls
+  588  cd hw6
+  589  clear
+  590  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_6_exercise_1.git
+  591  ls
+  592  cd ulxocmyh-python_online_task_6_exercise_1
+  593  git status
+  594  git add task_6_ex_1.py
+  595  git commit -m "first, 14.29, 18/03/21"
+  596  git push origin master
+  597  git status
+  598  git add task_6_ex_1.py
+  599  git commit -m "second, 14.36, 18/03/21"
+  600  git push origin master
+  601  clear
+  602  git status
+  603  git add task_6_ex_1.py
+  604  git commit -m "Third, 14.40, 18/03/21"
+  605  git push origin master
+  606  cd ../..
+  607  cd hw4
+  608  ls
+  609  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_4_exercise_11.git
+  610  ls
+  611  cd ulxocmyh-python_online_task_4_exercise_11
+  612  git status
+  613  clear
+  614  git status
+  615  git add task_4_ex_11.py
+  616  git commit -m "first, 13.55, 18/03/21"
+  617  git push origin master
+  618  cd ../..
+  619  ls
+  620  cd hw6
+  621  ls
+  622  cd ulxocmyh-python_online_task_6_exercise_2
+  623  ls
+  624  git status
+  625  git add task_6_ex_2.py
+  626  git commit -m "first, 17.01, 19/03/21"
+  627  git push origin master 
+  628  clear
+  629  git status
+  630  git add task_6_ex_2.py
+  631  git commit -m "second, 17.12, 19/03/21"
+  632  git push origin master 
+  633  git status
+  634  git add task_6_ex_2.py
+  635  git commit -m "Third, 15.36, 22/03/21"
+  636  git push origin master 
+  637  git status
+  638  git add task_6_ex_2.py
+  639  git commit -m "4, 15.36, 22/03/21"
+  640  git push origin master 
+  641  clear
+  642  git status
+  643  git add task_6_ex_2.py
+  644  git commit -m "5, 16.33, 22/03/21"
+  645  git push origin master 
+  646  git status
+  647  git add task_6_ex_2.py
+  648  git commit -m "6, 18.07, 22/03/21"
+  649  git push origin master 
+  650  git status
+  651  git add task_6_ex_2.py
+  652  git commit -m "7, 18.58, 22/03/21"
+  653  git push origin master 
+  654  clear
+  655  git status
+  656  git add task_6_ex_2.py
+  657  git commit -m "8, 15.50, 23/03/21"
+  658  git push origin master 
+  659  git status
+  660  git add task_6_ex_2.py
+  661  git commit -m "9, 16.12, 23/03/21"
+  662  git push origin master 
+  663  git status
+  664  git add task_6_ex_2.py
+  665  git commit -m "9, 16.23, 23/03/21"
+  666  git push origin master 
+  667  cd ../..
+  668  ls
+  669  cd HWstests
+  670  ls
+  671  clear
+  672  ls
+  673  cd hw7test
+  674  ls
+  675  python 
+  676  cd ..
+  677  ls
+  678  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_6_exercise_2.git
+  679  cd ../hw7
+  680  ls
+  681  cd ulxocmyh-python_online_task_7_exercise_1
+  682  git status
+  683  git add task_7_ex_1.py
+  684  git commit -m "first 17.27, 23/03/21"
+  685  git push origin master
+  686  git status
+  687  git add task_7_ex_1.py
+  688  git commit -m "second 17.42, 23/03/21"
+  689  git push origin master
+  690  clear
+  691  git status
+  692  git add task_7_ex_1.py
+  693  git commit -m "second 18.34, 23/03/21"
+  694  git push origin master
+  695  git status
+  696  git add task_7_ex_1.py
+  697  git commit -m "5 19.45, 23/03/21"
+  698  git push origin master
+  699  git status
+  700  git add task_7_ex_1.py
+  701  git commit -m "6 19.53, 23/03/21"
+  702  git push origin master
+  703  git status
+  704  git add task_7_ex_1.py
+  705  git commit -m "num of squares 20.29, 23/03/21"
+  706  git push origin master
+  707  git pull origin master
+  708  nano task_7_ex_1.py
+  709  git pull origin master
+  710  nano task_7_ex_1.py
+  711  git commit -m "num of squares 20.33, 23/03/21"
+  712  git push origin master
+  713  git status
+  714  git add task_7_ex_1.py
+  715  git commit -m "index of max squares 20.49, 23/03/21"
+  716  git push origin master
+  717  git status
+  718  git add task_7_ex_1.py
+  719  git commit -m "index of min perimeter 21.06, 23/03/21"
+  720  git push origin master
+  721  clear
+  722  ls
+  723  jup
+  724  atom .
+  725  ls
+  726  cd hw7
+  727  ls
+  728  cd ulxocmyh-python_online_task_7_exercise_2
+  729  git status
+  730  git add task_7_ex_2.py
+  731  git commit -m "5, 16.11, 25/03/21"
+  732  git push origin master
+  733  git status
+  734  git add task_7_ex_2.py
+  735  git commit -m "6, 16.26, 25/03/21"
+  736  git push origin master
+  737  cd ../../
+  738  cd ..
+  739  jup
+  740  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_9_exercise_5.git
+  741  git status
+  742  ls 
+  743  cd ulxocmyh-python_online_task_9_exercise_5
+  744  git status
+  745  git add task_9_ex_5.py
+  746  git commit -m "first, 12.09, 31/03/2021"
+  747  git push origin master
+  748  git add task_9_ex_5.py
+  749  git commit -m "second, 12.18, 31/03/2021"
+  750  git push origin master
+  751  cd ..
+  752  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_9_exercise_1.git
+  753  ls
+  754  clear
+  755  ls
+  756  cd ulxocmyh-python_online_task_9_exercise_1
+  757  git status
+  758  git add task_9_ex_1.py
+  759  git status
+  760  git add task_9_ex_1.py
+  761  git commit -m "first, 12.54, 31/03/21" 
+  762  git push origin master
+  763  cd ..
+  764  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_9_exercise_2.git
+  765  ls
+  766  clear
+  767  ls
+  768  cd ulxocmyh-python_online_task_9_exercise_2
+  769  git status
+  770  git add task_9_ex_2.py
+  771  git commit -m "first, 13.58, 31/03/21"
+  772  git push origin master
+  773  git status
+  774  git add task_9_ex_2.py
+  775  git commit -m "second, 14.07, 31/03/21"
+  776  git push origin master
+  777  git add task_9_ex_2.py
+  778  git commit -m "Third, 14.17, 31/03/21"
+  779  git push origin master
+  780  cd ..
+  781  clear
+  782  git clone
+  783  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_9_exercise_3.git
+  784  ls
+  785  cd ulxocmyh-python_online_task_9_exercise_3
+  786  git status
+  787  git add task_9_ex_3.py
+  788  git commit -m "First, 14.40, 31/03/21"
+  789  git push origin master
+  790  clear
+  791  git status
+  792  git add task_9_ex_3.py
+  793  git commit -m "Second, 14.52, 31/03/21"
+  794  git push origin master
+  795  cd ..
+  796  ls
+  797  git clone https://rep.lab.epam.com/api_client/ulxocmyh-python_online_task_9_exercise_4.git
+  798  ls
+  799  cd ulxocmyh-python_online_task_9_exercise_4
+  800  git status
+  801  git add task_9_ex_4.py
+  802  git commit -m "First, 17.34, 31/03/21"
+  803  git push origin master
+  804  clear
+  805  git status
+  806  git add task_9_ex_4.py
+  807  git commit -m "Second, 18.01, 31/03/21"
+  808  git push origin master
+  809  git status
+  810  git add task_9_ex_4.py
+  811  git commit -m "Third, 18.13, 31/03/21"
+  812  git push origin master
+  813  git add task_9_ex_4.py
+  814  git commit -m "4, 18.25, 31/03/21"
+  815  git push origin master
+  816  clear
+  817  git status
+  818  git add task_9_ex_4.py
+  819  git commit -m "5, 18.30, 31/03/21"
+  820  git push origin master
+  821  cd ~
+  822  ls
+  823  cd programming/python
+  824  ls
+  825  jup
+  826  atom .
+  827  ls
+  828  python main.py
+  829  conda deactivate
+  830  git clone https://github.com/dgiart/final05_python_2021.git
+  831  ls
+  832  cd final05_python_2021
+  833  ls
+  834  pip3 -V
+  835  pip -V
+  836  python3.8 -m venv venv
+  837  ls
+  838  source venv/bin/activate
+  839  pip freeze
+  840  pip install -r requirements.txt
+  841  pip freeze
+  842  pip install --upgrade pip
+  843  pip -V
+  844  ls
+  845  cd ../.
+  846  cd ../..
+  847  cd -
+  848  cd ..
+  849  atom .
+  850  git status
+  851  conda deactivate
+  852  python -v
+  853  python
+  854  conda deactivate
+  855  python
+  856  pip install mysql-connector==2.1.4
+  857  conda deactivate
+  858  cd exercizes
+  859  python -V
+  860  python module_test.py
+  861  python 
+  862  python module_test.py
+  863  pip install sqlalchemy-migrate
+  864  pip install sqlalchemy-migrate==0.7.2
+  865  mysql -u art -p 
+  866  python 
+  867  yum install sqlite-devel
+  868  conda deactivate
+  869  sudo apt install yum
+  870  yum install sqlite-devel
+  871  sudo yum install sqlite-devel
+  872  sudo pip install sqlite-devel
+  873  pip install sqlite-devel
+  874  pip -V
+  875  pip3 -V
+  876  mysql -u art =p
+  877  mysql -u art -p
+  878  conda deactivate
+  879  PROMPT_DIRTRIM=3
+  880  PROMPT_DIRTRIM=2
+  881  mysql -u art -p
+  882  ls
+  883  pwd
+  884  cd 28_04_udemy_test
+  885  flask db init 
+  886  pip freeze
+  887  ls
+  888  export FLASK_APP=app.py
+  889  flask db init 
+  890  ls
+  891  db migrate -m "genre deleted, cost and published added"
+  892  flask db migrate -m "genre deleted, cost and published added"
+  893  flask db upgrade
+  894  mysql -u art -p
+  895  flask db migrate -m "Empoyee table added"
+  896  flask db upgrade
+  897  mysql -u art -p
+  898  conda deactivate
+  899  git status
+  900  cd ../..
+  901  ls
+  902  ls department-app
+  903  git status
+  904  git add department-app
+  905  git status
+  906  git add department-app/rest
+  907  git commit -m "problem with struct"
+  908  git push origin struct
+  909  git status
+  910  git commit -m "empty models added"
+  911  git push origin struct
+  912  conda deactivate
+  913  ls
+  914  cd department-app/static
+  915  cd department-app
+  916  ls
+  917  cd static
+  918  ls
+  919  cd static
+  920  ls static
+  921  ls
+  922  it status
+  923  git status
+  924  cd static
+  925  ls
+  926  python 
+  927  cd ../..
+  928  cd exercizes
+  929  ls
+  930  cd 
+  931  cd 28_04_udemy_test
+  932  ls
+  933  conda deactivate
+  934  python
+  935  ls
+  936  cd /programming/python/epam2021/final/final05_python_2021/
+  937  cd /programming/python/epam2021/final/final05_python_2021
+  938  cd programming/python/epam2021/final/final05_python_2021
+  939  ls
+  940  cd department-app
+  941  flask db migrate -m "added table department"
+  942  la
+  943  export flask FLASK_APP=setup.py
+  944  flask db migrate -m "added table department"
+  945  flask db init
+  946  flask db migrate -m "added table department"
+  947  flask db upgrade
+  948  cd ..
+  949  ls 
+  950  cd exercizes
+  951  ls
+  952  cd eid = db.Column(db.Integer, primary_key=True)
+  953  cd 28_04_udemy_test
+  954  ls
+  955  refacttoring
+  956  cd refacttoring
+  957  flask db -m "migrate"
+  958  flask db migrate -m "test"
+  959  export flask FLASK_APP=app.py
+  960  flask db migrate -m "test"
+  961  flask db upgrade
+  962  flask db migrate -m "test2"
+  963  flask db upgrade
+  964  cd ../..
+  965  cd ..
+  966  ls | grep dep
+  967  cd department-app
+  968  export flask FLASK_APP=setup.py
+  969  flask db migrate -m "add departments to db"
+  970  flask db upgrade
+  971  flask db migrate -m "add departments to db"
+  972  flask db upgrade
+  973  flask db migrate -m "add emploee to db, d->D, e->E"
+  974  flask db migrate -m "add emploee to db, d->D, e->E, __init__ in dept"
+  975  flask db upgrade
+  976  flask db migrate -m "add emploee to db, d->D, e->E, __init__ in dept"
+  977  flask db upgrade
+  978  flask db migrate -m "add emploee to db, d->D, e->E, __init__ in dept"
+  979  flask db upgrade
+  980  flask db migrate -m "add emploee to db, d->D, e->E, __init__ in dept"
+  981  flask db upgrade
+  982  python
+  983  flask db migrate -m "back to id_dep"
+  984  flask db upgrade
+  985  flask db migrate -m "test"
+  986  flask db upgrade
+  987  flask db migrate -m "test deleted"
+  988  flask db upgrade
+  989  export FLASK_APP=setup.py
+  990  flask db init
+  991  flask db migrate -m "test deleted"
+  992  flask db upgrade
+  993  flask db init
+  994  flask db migrate -m "test deleted"
+  995  flask db init
+  996  flask db migrate -m "test deleted"
+  997  flask db upgrade
+  998  flask db init
+  999  flask db migrate -m "test deleted"
+ 1000  flask db upgrade
+ 1001  conda deactivate
+ 1002  flask db migrate -m "test deleted"
+ 1003  export FLASK_APP=setup.py
+ 1004  flask db migrate -m "back to not ORM"
+ 1005  flask db upgrade
+ 1006  flask db migrate -m "back to not ORM"
+ 1007  flask db upgrade
+ 1008  python
+ 1009  flask db migrate -m "back to not ORM"
+ 1010  flask db upgrade
+ 1011  python
+ 1012  flask db migrate -m "back to not ORM"
+ 1013  flask db upgrade
+ 1014  python
+ 1015  history>history_31_05_job.txt

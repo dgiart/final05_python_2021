@@ -1,4 +1,4 @@
-from app import db
+from app_old import db
 
 
 class Book(db.Model):
@@ -9,6 +9,7 @@ class Book(db.Model):
     author = db.Column(db.String(250), nullable=False)
     published = db.Column(db.Integer)
     cost = db.Column(db.Integer)
+
     # genre = db.Column(db.String(250))
 
     def __init__(self, title, author, genre):
@@ -28,5 +29,8 @@ class Employee(db.Model):
         self.birth = birth
         self.salary = salary
 
+    def __repr__(self):
+        return f'name: {self.name}, id={self.eid}'
 
-
+    def json(self):
+        return {'id': self.eid, 'name': self.name}
