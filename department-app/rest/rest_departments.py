@@ -67,10 +67,9 @@ class DepartmentItem(Resource):
             return 'Bad Request', 400
         title = data.get('title')
         item_id = put_department(id_dept, title)
-        employee = {'id': item_id, 'title': title}
-        resp = jsonify(employee)
-        resp.status_code = 201
-        # resp = None
+        department = {'id': item_id, 'title': title}
+        resp = jsonify(department)
+        resp.status_code = 200
         return resp
 
 

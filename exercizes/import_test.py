@@ -1,4 +1,4 @@
-from modules.module_test import A
+from modules.module_test import foo
 import sys
 
 def main():
@@ -8,4 +8,4 @@ def main():
         print(el)
 
 if __name__ == '__main__':
-    main()
+    foo()
