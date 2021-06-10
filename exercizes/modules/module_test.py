@@ -3,7 +3,7 @@ print('Hi from MODULE')
 import flask
 
 def foo(text = 'foo'):
-    print(f'Hi from {text}')
+    print('Hi from {text}')
 
 class A:
     def a(self):

@@ -2,7 +2,6 @@ from sqlalchemy import Column, ForeignKey, Integer, String
 from database_setup import Base
 
 
-
 # мы создаем класс Book наследуя его из класса Base.
 
 

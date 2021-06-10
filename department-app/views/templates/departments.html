@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>List of Departments</h2>
+<br>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">title</th>
+        <th scope="col">Average Salary</th>
+        <th scope="col">Number of Employees</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for department in departments %}
+      <tr>
+        <th scope="row">{{ department['id'] }}</th>
+        <td><a href="{{url_for('view_departments.department_item', id_dept = department.id)}}">{{ department['title'] }}</a> </td>
+        <td>{{ department['average salary'] }}</td>
+        <td>{{ department['employees']|length }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

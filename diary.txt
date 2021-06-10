@@ -23,3 +23,17 @@ book - changed
 employee - added
 migrations done
 
+08/05/21, 18.23
+
+app_test created, structure created
+work with CRUD for simple model
+Object of type Departments is not JSON serializable
+
+14/05/2021
+Object '<Employee at 0x7f3b78a6e970>' is already attached to session '1' (this is '2')
+
+17.05.2021 Program has been refactored, all work, sender.py works (data in URL).
+18.05.2021 jsonify -> request object
+           request.get_json(), postman: body of POST ??? in sender.py not data but json
+
+
