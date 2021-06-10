@@ -9,7 +9,7 @@ from datetime import date
 from flask import Flask, request, render_template
 from collections import Counter
 
-from models.models import Departments
+
 # import random
 from flask import Flask, request
 from collections import Counter
