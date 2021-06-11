@@ -1,11 +1,13 @@
 from flask import Blueprint, jsonify, request
 from flask_restful import Resource, Api
+import logging
 from service.crud import add_department, get_departments, get_department, del_department, put_department
 from service.checkers import department_check
 from models.models import department_keys
 rest_departments_blueprint = Blueprint('departments', __name__)
 dept_api = Api(rest_departments_blueprint)
-
+logger = logging.getLogger('dep')
+from  datetime import datetime
 
 class Departments(Resource):
     def post(self):
@@ -21,6 +23,8 @@ class Departments(Resource):
         department = {'title': title, 'id': item_id}
         resp = jsonify(department)
         resp.status_code = 201
+        log_msg = f'dep {item_id}, {title}, created : {datetime.now()}'
+        logger.warning(log_msg)
         return resp
 
     def get(self):

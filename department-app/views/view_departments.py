@@ -1,6 +1,10 @@
 from flask import Blueprint, render_template, jsonify, request, url_for, redirect
+import logging
 from service.crud import add_department, get_departments, get_department, del_department, put_department
 from .forms import DepartmentForm
+logging.basicConfig(filename="departments_log.log", level=logging.WARNING)
+logger = logging.getLogger('dep')
+from  datetime import datetime
 
 # from rest.checkers import department_check
 view_departments_blueprint = Blueprint('view_departments', __name__, template_folder='templates')
@@ -8,6 +12,10 @@ view_departments_blueprint = Blueprint('view_departments', __name__, template_fo
 
 @view_departments_blueprint.route('/')
 def departments_list():
+    """
+    Show list of departments
+    :return:
+    """
     departments = get_departments()
     return render_template('departments.html', departments=departments)
 
@@ -24,6 +32,8 @@ def create_department():
     if form.validate_on_submit():
         title = form.title.data
         id_dept = add_department(title)
+        log_msg = f'dep {id_dept}, {title}, created : {datetime.now()}'
+        logger.warning(log_msg)
         return redirect(url_for('view_departments.department_item', id_dept=id_dept))
     return render_template('department_create.html', form=form)
 
@@ -42,7 +52,6 @@ def delete_department(id_dept):
 def edit_department(id_dept):
     form = DepartmentForm()
     department = get_department(id_dept)
-    print(form.validate_on_submit())
     if form.validate_on_submit():
         title = form.title.data
         put_department(id_dept, title)

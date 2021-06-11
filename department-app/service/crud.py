@@ -120,18 +120,14 @@ def get_employees(*args):
         employees = Employee.query.all()
     else:
         try:
-            print(f'dates: {args}')
             start_tuple = args[0][:3]
             end_tuple = args[0][3:]
-            print(f'start_tuple: {start_tuple}')
-            print(f'end_tuple: {end_tuple}')
             start_year, start_month, start_day = tuple(map(lambda x: int(x), start_tuple))
             start_date = datetime(start_year, start_month, start_day)
             and_year, end_month, end_day = tuple(map(lambda x: int(x), end_tuple))
             end_date = datetime(and_year, end_month, end_day)
             employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date]
         except TypeError as te:
-            print(te)
             employees = Employee.query.all()
     # employees = [employee for employee in Employee.query.all() if start_date <= employee.birthday <= end_date ]
     to_return = [

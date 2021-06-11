@@ -6,11 +6,9 @@ from models.models import Department, Employee
 def has_value(data: dict, model_keys: list) -> bool:
     for key in model_keys:
         try:
-            print(data)
             if not data.get(key):
                 return False
         except AttributeError as e:
-            print(f'AttributeError in check {e}')
             return False
     return True
 
