@@ -29,5 +29,4 @@ class Employee(db.Model):
     def __init__ (self, *args, **kwargs):
         super(Employee, self). __init__(*args, **kwargs)
 
-    def __repr__(self):
-        return f'Employee: id: {self.id_empl}, name: {self.name}, birthday: {self.birthday}, department: {self.id_empl_dept}'
+
