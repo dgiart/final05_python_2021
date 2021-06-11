@@ -3,6 +3,7 @@ import random
 from datetime import datetime
 from setup import db
 from datetime import date
+import pickle
 # from numpy import np
 # import random
 from flask import Flask, request, render_template
@@ -78,11 +79,35 @@ def get_average_salary(id_dept):
         salary += employee.salary
     return (salary / len(employees)).__round__(2)
 
+
 def foo(*args):
-    return(args)
+    return (args)
+
+
+def populate():
+    departments = ['research, counter, administration, advertisement', 'education']
+    path = '/home/artem/programming/python/epam2021/final/final05_python_2021/department-app/static/blnrs.pckl'
+    employees = []
+    with open(path, 'rb') as file:
+        blnrs = pickle.load(file)
+        for blnr in blnrs:
+            employees.append(blnr.get('commonName'))
+    for empl in employees:
+        year = random.randint(1970, 2001)
+        month = random.randint(1, 12)
+        day = random.randint(1, 30)
+
+        birthday = date(year, month, day)
+        e = Employee(name=empl, salary=random.randint(1, 10) * 1000, birthday=birthday, id_empl_dept=random.randint(1, 3))
+        db.session.add(e)
+        db.session.commit()
+    return employees
+
+
 if __name__ == '__main__':
-    date_ = date('1979 - 04 - 25')
-    print(date_)
+    date_ = 3
+    populate()
+    print(populate())
     # int(None)
     # t = '1', '2', '3'
     # print(foo())
@@ -120,7 +145,7 @@ if __name__ == '__main__':
     # e1.id_empl = 10000
     # e2.birthday = datetime.now().date()
     # e2.id_empl_dept = 1
-    d1 = Department.query.filter_by(id_dept=10).first()
+    d1 = Department.query.filter_by(id_dept=1).first()
     print(d1)
     # d1.title = 'study'
     # db.session.add(e2)

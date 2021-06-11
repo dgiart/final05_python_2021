@@ -1,8 +1,11 @@
 from flask import Blueprint, jsonify, request
 from flask_restful import Resource, Api
+import logging
+from datetime import datetime
 from service.crud import add_employee, get_employees, get_employee, del_employee, put_employee
 from models.models import employee_keys
 from service.checkers import employee_check
+logger = logging.getLogger('empl')
 
 rest_employees_blueprint = Blueprint('employees', __name__)
 empl_api = Api(rest_employees_blueprint)
@@ -24,7 +27,9 @@ class Employees(Resource):
         employee = {'id': item_id, 'name': name}
         resp = jsonify(employee)
         resp.status_code = 201
-        # resp = None
+        id_empl = add_employee(name, salary, birthday, id_empl_dept)
+        log_msg = f'empl {id_empl_dept}, {name}, created : {datetime.now()}'
+        logger.warning(log_msg)
         return resp
 
     def get(self):

@@ -7,15 +7,8 @@ This module implements functions which create/drop databases.
 """
 
 import mysql.connector
-import pickle
-def populate():
-    path = '/home/art/programming/python/epam2021/final/final05_python_2021/department-app/static/blnrs.pckl'
-    employees = []
-    with open(path, 'rb') as file:
-        blnrs = pickle.load(file)
-        for blnr in blnrs:
-            employees.append(blnr.get('commonName'))
-    return employees
+
+
 class Database:
     def __init__(self):
         self.bases = {}
@@ -49,9 +42,9 @@ class Database:
 
 
 if __name__ == '__main__':
-    print(populate())
-    # b = Database()
+    # print(populate())
+    b = Database()
     # b.create_base('db_to_test', 'art', 'artem', 'localhost')
     # for i in range(2, 8):
     # b.drop_base(f'db_to_test', 'art', 'artem', 'localhost')
-    # print(b.bases)
+    print(b.bases)

@@ -1,9 +1,11 @@
-from setup import app
+from setup import app, db
 from rest.rest_departments import rest_departments_blueprint
 from views.view_departments import view_departments_blueprint
 from views.view_employees import view_employees_blueprint
 from rest.rest_employees import rest_employees_blueprint
 from flask import render_template, request, jsonify
+from models.models import Department, Employee
+db.create_all()
 
 app.register_blueprint(rest_departments_blueprint, url_prefix='/rest/departments')
 app.register_blueprint(rest_employees_blueprint, url_prefix='/rest/employees')
